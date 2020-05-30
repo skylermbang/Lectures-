@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JQuery 연습하고 가기!</title>
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style type="text/css">
+      div.question-box {
+        margin: 10px 0 20px 0;
+      }
+      div.question-box > div {
+        margin-top: 30px;
+      }
+      .img-cat {
+        width: 650px;
+
+        margin: auto;
+      }
+    </style>
+
+    <script>
+      function q1() {
+        $.ajax({
+          type: "GET",
+          url: "https://api.thecatapi.com/v1/images/search",
+          data: {},
+          success: function (response) {
+            console.log(response[0]["url"]);
+            let pic = response[0]["url"];
+
+            $("#img-cat").attr("src", pic);
+          },
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JQuery+Ajax combination practice!</h1>
+
+    <hr />
+
+    <div class="question-box">
+      <h2>3. I HATE CATS</h2>
+      <p>Let see some ugly pics of cats</p>
+      <p>
+        Every time you click on the button you will see randome pic of cats .
+      </p>
+      <button onclick="q1()">Give me some cats pics</button>
+      <div>
+        <img id="img-cat" src="" />
+      </div>
+    </div>
+  </body>
+</html>

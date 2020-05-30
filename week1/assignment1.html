@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment_1 by Minsu</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Black Han Sans", sans-serif;
+      }
+      .product {
+        width: 500px;
+        height: 200px;
+        background-image: url("http://blogfiles.naver.net/MjAyMDA0MjFfMjc3/MDAxNTg3NDQwNzUwODkz.OhP0JWgIba29jBHkos79_j2aSTFF7iE1YqajZbQuR60g.7Pk9o2DPMLV9kDll3L-7GCsEhxIxxUS15P1h0T3cqnog.JPEG.spartacoding/64473797_494089054661496_9180787225661538304_o.jpg");
+        background-position: center;
+        background-size: cover;
+
+        margin: auto;
+      }
+
+      .wrap {
+        margin: auto;
+        width: 500px;
+      }
+      .button {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      function order() {
+        alert(" 주문이 완료 되었습니다 !");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="product">
+        <!-- <img src="http://blogfiles.naver.net/MjAyMDA0MjFfMjc3/MDAxNTg3NDQwNzUwODkz.OhP0JWgIba29jBHkos79_j2aSTFF7iE1YqajZbQuR60g.7Pk9o2DPMLV9kDll3L-7GCsEhxIxxUS15P1h0T3cqnog.JPEG.spartacoding/64473797_494089054661496_9180787225661538304_o.jpg"> -->
+      </div>
+      <div class="descrpition">
+        <h1 style="text-align: left; float: left;">상품설명</h1>
+        <h2 style="text-align: right; float: right;">가격 450$ /8 weeks</h2>
+        <hr style="clear: both;" />
+
+        <p>
+          이 수업은 당신이 개발자로서 인생을 시작하게 해준다. 근데 나이거 너무
+          벌써부터 어려워... 왜저는 밑에 있는거 이쁘게 정렬이 안됄까요.. 질문1.
+          밑에 폼들은 왜 정렬이 이쁘게안될까요? 질문2. 버튼 저는 노랑색 큰걸
+          넣었는데 왜 적용이안됄까요 질문3. 위에 상품설명 이랑 가격이 서로
+          안붙네요...
+        </p>
+
+        <div>
+          <h1>주문하기</h1>
+          <div class="form-group">
+            <label for="exampleInputEmail1"> 주문자 성함</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="이름"
+            />
+          </div>
+          <label for="exampleInputEmail1"> 수업 갯수 </label>
+          <select class="custom-select">
+            <option selected> 수업골라요</option>
+            <option value="1"> Course 1 (8 weeks)</option>
+            <option value="2"> Course 2 (16 weeks) </option>
+            <option value="3"> COurse 3 (24 weeks)</option>
+          </select>
+          <div class="form-group">
+            <label for="exampleInputPassword1">주소</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="주소를 넣어주세요"
+            />
+
+            <div class="form-group">
+              <label for="exampleInputPassword1"> 전화번호 </label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="전화 번호 "
+              />
+            </div>
+          </div>
+          <div class="button">
+            <button
+              onclick="order()"
+              type="button"
+              class="btn btn-warning btn-lg"
+            >
+              주문하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
