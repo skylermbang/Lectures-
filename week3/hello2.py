@@ -10,3 +10,4 @@ gus = rjson['RealtimeCityAir']['row']
 for gu in gus:
     if gu['IDEX_MVL'] < 60:
         print(gu['MSRSTE_NM'], gu['IDEX_MVL'])
+
