@@ -45,6 +45,18 @@ for tr in trs:
         db.movies.insert_one(doc)
         print(rank, movie, score)
 
+target = db.movies.find_one({'title': '매트릭스'})
+target_star = target['star']
 
-target = db.movies.find_one({'name': '매트릭스'}, {'_id': False})
-print(target)
+
+movies = list(db.movies.find({'star': target_star}))
+
+
+for movie in movies:
+    print(movie['title'])
+
+
+db.movies.update_one({'star': '9.39'}, {'$set': {'star': 0}})
+
+user = db.movies.find_one({'star': '0'})
+print(user)
