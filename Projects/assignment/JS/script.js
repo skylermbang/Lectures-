@@ -12,8 +12,8 @@ document.write(phrase.charAt(2));
 // index start from 0
 
 document.write(phrase.indexOf("r"));
-\n;
+
 document.write(phrase.substring(4, 9));
-\n;
+
 document.write(phrase.include("skyler"));
 document.write(phrase.endsWith("good"));
