@@ -16,7 +16,6 @@ body {
 a {
   text-decoration: none;
 }
-
 /* HEADER */
 .header {
   background: #f8b832;
@@ -63,7 +62,6 @@ a {
 .list-item > a:hover {
   color: #2b2303;
 }
-
 /* MAIN */
 .main {
   text-align: center;
@@ -100,27 +98,22 @@ a {
   width: 70%;
   background: white;
 }
-
 .update {
   float: right;
   width: 30%;
   border-bottom: 1px solid #cfe3dc;
   margin-bottom: auto;
 }
-
 .update-title {
   text-align: center;
 }
-
 .container-float {
   border-bottom: 1px solid #cfe3dc;
 }
-
 .book_img {
   float: left;
   width: 70%;
 }
-
 .book_desc {
   float: right;
   width: 30%;
@@ -130,8 +123,10 @@ a {
   background: ivory;
   clear: both;
 }
-
 .main2 {
   background-image: url("https://thehustle.co/wp-content/uploads/2020/05/2020-News-Brief_2020-05-04T011000.236Z.jpg");
-  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
