@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./bookquiz.css" />
+  </head>
+  <div class="wrap">
+    <body class="quiz_container">
+        <div class='slideshow w3-content w3-display-container'>
+         
+            <img class="mySlides" src="/6.JPG" />
+            <img class="mySlides" src="7.PNG" />
+            <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+           
+        </div>
+
+        <div class="question-box">
+         <div class= "booktitle"><h1> Froggy Goes to School</h1></div> 
+          <div clas="question-number"><p>1. blah blah?</p></div>  
+        </div>
+            
+        <form name="form">
+        <div class="answer-option">
+        <input type="radio" name="kingName" value="v1" />a<br />
+        <input type="radio" name="kingName" value="v2" />b<br />
+        <input type="radio" name="kingName" value="v3" />c<br />
+        <input type="radio" name="kingName" value="v4" />d<br />
+        </div>
+        <input
+            class="check-btn"
+            type="button"
+            name="선택"
+            value="정답확인"
+            onclick="myFucntion()"
+        />
+        </form>
+        <p id="check"></p>
+    </div>  
+    <script type="text/javascript">
+      function myFucntion() {
+        if (form.kingName[2].checked == true)
+          document.getElementById("check").innerHTML = "정답입니다.";
+        else document.getElementById("check").innerHTML = "오답입니다.";
+      }
+
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
