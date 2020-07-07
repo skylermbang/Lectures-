@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style5.css" />
+  </head>
+  <body>
+
+    <div class='slideshow w3-content w3-display-container'>
+         
+            <img class="mySlides" src="/6.JPG" />
+            <img class="mySlides" src="7.PNG" />
+            <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+           
+    </div>
+
+
+    <div class="home-box custome-box hide">
+      <h3>Instruction :</h3>
+      <p>Total numbe of questions: <span class="total-question">5</span></p>
+      <button type="button" class="btn">START QUIZ</button>
+    </div>
+
+    <div class="quiz-box custome-box">
+      <div class="question-number">Question 1 of 5</div>
+
+      <div class="qustion-text">Which month comes right before June?</div>
+
+      <div class="option-container">
+        <div class="option">July</div>
+        <div class="option">May</div>
+        <div class="option">Seotenber</div>
+        <div class="option">August</div>
+      </div>
+      <div class="next-qustion-btn">
+        <button type="button" class="btn">NEXT</button>
+      </div>
+      <div class="answers-indicator">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="result-box custome-box hide">
+      <h1>Quiz Result</h1>
+      <table>
+        <tr>
+          <td>Total Qustion</td>
+          <td><span class="total-question"> 5 </span></td>
+        </tr>
+        <tr>
+          <td>Attempt</td>
+          <td><span class="total-attempt"> 4 </span></td>
+        </tr>
+        <tr>
+          <td>Correct</td>
+          <td><span class="total-correct"> 3 </span></td>
+        </tr>
+        <tr>
+          <td>wrong</td>
+          <td><span class="total-wrong"> 1 </span></td>
+        </tr>
+        <tr>
+          <td>Percentage</td>
+          <td><span class="percentage"> 60.00%</span></td>
+        </tr>
+        <tr>
+          <td>Your Total Score</td>
+          <td><span class="total-score"> 3 / 5 </span></td>
+        </tr>
+      </table>
+
+      <button type="button" class="btn">Try again</button>
+      <button type="button" class="btn">Go To Home</button>
+    </div>
+
+    <script src="js/question.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

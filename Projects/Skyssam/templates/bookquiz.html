@@ -15,7 +15,7 @@
             <button class="w3-button w3-white w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
            
         </div>
-
+    <div class ="quiz-section">
         <div class="question-box">
          <div class= "booktitle"><h1> Froggy Goes to School</h1></div> 
           <div clas="question-number"><p>1. blah blah?</p></div>  
@@ -23,10 +23,10 @@
             
         <form name="form">
         <div class="answer-option">
-        <input type="radio" name="kingName" value="v1" />a<br />
-        <input type="radio" name="kingName" value="v2" />b<br />
-        <input type="radio" name="kingName" value="v3" />c<br />
-        <input type="radio" name="kingName" value="v4" />d<br />
+        <input type="radio" name="answer" value="v1" />a<br />
+        <input type="radio" name="answer" value="v2" />b<br />
+        <input type="radio" name="answer" value="v3" />c<br />
+        <input type="radio" name="answer" value="v4" />d<br />
         </div>
         <input
             class="check-btn"
@@ -35,12 +35,13 @@
             value="정답확인"
             onclick="myFucntion()"
         />
-        </form>
-        <p id="check"></p>
+            </form>
+            <p id="check"></p>
+        </div>  
     </div>  
     <script type="text/javascript">
       function myFucntion() {
-        if (form.kingName[2].checked == true)
+        if (form.answer[2].checked == true)
           document.getElementById("check").innerHTML = "정답입니다.";
         else document.getElementById("check").innerHTML = "오답입니다.";
       }
