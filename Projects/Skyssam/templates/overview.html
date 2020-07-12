@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview | Sky쌤</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/overview_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  </head>
+  <body>
+        <header class="header">
+          <div class="container">
+            <span class="logo_text">SKY쌤 English Book</span>
+            <a href={{ url_for('home') }}>
+            <h1 class="logo">
+              <img src="{{ url_for('static', filename='img/logo.png') }}" />
+              </a>
+              
+            </h1>
+            <nav class="nav">
+              <ul class="list">
+                <li class="list-item"><a href={{ url_for('overview') }}>Overview</a></li>
+                <li class="list-item"><a href={{ url_for('quiz') }}>Book Quiz</a></li>
+                <li class="list-item"><a href={{ url_for('overview') }}>About</a></li>
+    
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main class="main"> 
+            <div class="container-float">
+              <div class="main-content">
+                <h2 class="main-title"> 영어독서 확실하게 하는법 </h2>
+                <hr class="hrcss"></hr>
+                <p class="main-desc">
+                    올바른 영어독서 습관 만들기
+                    <br>
+                    영어를 "점수" 가아닌 "언어"로 습득하기 제일 기초적인 방법
+                    <ul>
+                        <li> Extensive Reading  다독</li>
+                        <li> Intensive Reading  정독</li>
+                    </ul>
+                </p>   
+              </div>
+              <div class="base">
+                <p  class="main_desc">
+                <div class="book1">
+                   
+                  <span class="ribbon1"> </span>
+                  
+                  <div class="book1-r"></div>
+                </div>
+                <div class="book2"></div>
+                <div class="book3">
+                    
+                  <span class="ribbon3">　</span>
+                  <div class="book3-l"></div>
+                </div>
+                <div class="book4"></div>
+                <div class="book5"></div>
+                <div class="book6">
+                  <span class="ribbon6">　</span>
+                  <div class="book6-l"></div>
+                </div>
+                <div class="book7"></div>
+              </div>
+
+
+              <div class=container-youtube>
+              <iframe  class="youtube" src="https://www.youtube.com/embed/K67B_S509Kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="youtube-right"> <h2> 영어 독서 지도 </h2>
+                <p> 지도자 분의 책 내용 / 단어 / 이해 (Youtube영상)</p>
+                <p> 자연스러운 대화 :책을 주제로 대화하기</p>
+                <h2> 책 내용 퀴즈  <a href={{ url_for('froggy') }}><button> 퀴즈 보기</button></a> </h2>
+              
+                <p> 영어 독후감 쓰기</p>
+            
+            
+            </div>
+            </div>
+        </div>
+
+      <div class=main-desc>
+          <div class=left>
+              <p> 
+                  <h3> 영어 독서 </h3>
+                  <ul>
+                <li>1. 올바른 책 고르기 ( 레벨 / 관심사 )</li>
+                <li>2. 독서후 이해도 확인 
+                    <ul><li> 독서퀴즈 </li>
+                    <li> 독서게임</li>
+                    <li> 영문 독후감</li>
+                    </ul>
+                </li>
+
+
+              </ul></p>
+          </div>
+          <div class=right>
+              <h3> 주의사항</h3>
+          </div>
+      </div>
+                                            
+          
+       
+        <footer class="footer"> All right reserved @ skyler
+      </body>
+
+
+
+
+
+
+
+
+
+
+  
+</html>

@@ -3,11 +3,32 @@
   <head>
     <title>Quiz App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style5.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/froggy_goestoschool_style.css') }}">
+
   </head>
   <body>
-    
-  <img class="book-img" src="7.Png" />
+    <header class="header">
+      <div class="container">
+        <span class="logo_text">SKY쌤 English Book</span>
+        <a href={{ url_for('home') }}>
+        <h1 class="logo">
+          <img src="{{ url_for('static', filename='img/logo.png') }}" />
+          </a>
+          
+        </h1>
+        <nav class="nav">
+          <ul class="list">
+            <li class="list-item"><a href={{ url_for('overview') }}>Overview</a></li>
+            <li class="list-item"><a href={{ url_for('quiz') }}>Book Quiz</a></li>
+            <li class="list-item"><a href={{ url_for('overview') }}>About</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+  <img class="book-img"  src="{{ url_for('static', filename='img/7.png') }}" />
     <div class="quiz-box custome-box">
             <div class="question-number">Question 1 of 5</div>
               <div class ="book-title"><h1> Froggy Goes to School </h1></div>

@@ -1,0 +1,197 @@
+/* 공통 속성 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  min-width: 1060px;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: Roboto, Avenir, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* HEADER */
+.header {
+  background: #3271f8;
+  height: 72px;
+  padding: 15px 0 4px;
+}
+.container,
+.container-float {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+.container-float::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.logo {
+  margin: 0;
+  padding-left: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo_text {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+.nav {
+  text-align: right;
+  margin-left: 800px;
+}
+
+.list {
+  margin: 0;
+  font-size: 20px;
+}
+.list-item {
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.list-item > a {
+  color: white;
+  display: block;
+  padding: 10px;
+}
+.list-item > a:hover {
+  color: #2b2303;
+}
+
+/* MAIN */
+.main {
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  max-height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #070606;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #020202;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-top: 140px;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* 여기부터 글씨 */
+.main-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.book-cover {
+  border: 10px solid #fff;
+}
+.bookshelf {
+  background-color: #cecece;
+  padding: 20px;
+}
+
+.quiz-btn {
+  box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 6px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.quiz-btn:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+.quiz-btn:active {
+  position: relative;
+  top: 1px;
+}

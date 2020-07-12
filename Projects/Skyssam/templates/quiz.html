@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <span class="logo_text">SKY쌤 English Book</span>
+      <a href={{ url_for('home') }}>
+      <h1 class="logo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" />
+      </a>
+      </h1>
+      <nav class="nav">
+        <ul class="list">
+          <li class="list-item"><a href={{ url_for('overview') }}>Overview</a></li>
+          <li class="list-item"><a href={{ url_for('quiz') }}>Book Quiz</a></li>
+          <li class="list-item"><a href={{ url_for('overview') }}>About</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="main-text">
+    <h1>  영어책 퀴즈 리스트 </h1>
+    <p>
+      영어책을 어떻게 읽어야 할까요? 
+      바로 자신에게 알맞는 책을 읽는 것입니다.
+    </p>
+
+
+  </div>
+
+  <main class="main"> 
+   
+
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="{{ url_for('static', filename='img/21.png') }}" style="width:100%">
+      <div class="text"><!--쓸말이없는데아직--></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="{{ url_for('static', filename='img/7.png') }}" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="{{ url_for('static', filename='img/28.jpeg') }}" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="{{ url_for('static', filename='img/29.jpeg') }}" style="width:100%">
+      <div class="text"></div>
+    </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+    
+    </div>
+
+    <hr class="hrcss"></hr>
+
+   <div class="main-desc">
+    <h1> 책 리스트</h1>
+
+
+
+   </div>
+
+
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    </script>
+    
+
+   <div class="bookshelf">
+    <ul class="animated-promos clearfix">
+      <li>
+        <p>
+          <img src={{ url_for('static', filename='img/4.png') }} alt="First book cover" class="book-cover">
+
+          <h3>Froggy Goes to School</h3>
+          <a href={{ url_for('froggy') }} class="quiz-btn"> 퀴즈보기</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <img src={{ url_for('static', filename='img/9.jpeg') }} alt="Second book cover" class="book-cover">
+
+          <h3>Froggy Learns to Swim</h3>
+          <a href={{ url_for('froggy') }} class="quiz-btn"> 퀴즈보기</a>
+        </p>
+      </li>
+      
+    </ul>
+  </div>
+</body>
+</html>

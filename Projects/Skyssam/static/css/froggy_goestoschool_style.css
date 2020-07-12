@@ -7,6 +7,59 @@
   outline: none;
 }
 
+.header {
+  background: #17d39a;
+  height: 72px;
+  padding: 15px 0 4px;
+}
+.container,
+.container-float {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+.container-float::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.logo {
+  margin: 0;
+  padding-left: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo_text {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+.nav {
+  text-align: right;
+}
+.list {
+  margin: 0;
+  font-size: 0;
+}
+.list-item {
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.list-item > a {
+  color: white;
+  display: block;
+  padding: 10px;
+}
+.list-item > a:hover {
+  color: #2b2303;
+}
 body {
   margin: 0;
   font-size: 16px;
