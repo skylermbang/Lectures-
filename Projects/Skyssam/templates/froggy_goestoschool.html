@@ -32,7 +32,7 @@
     <div class="quiz-box custome-box">
             <div class="question-number">Question 1 of 5</div>
               <div class ="book-title"><h1> Froggy Goes to School </h1></div>
-                <div class="qustion-text"> How did Froggy go to school? </div>
+                <div class="qustion-text"> Why everybody laughed at Froggy on the bus?</div>
                   <div class="option-container option">
                     <form name="form1">
                         <input type="radio" name="answer1" value="v1" />Because Froggy is green<br />
@@ -102,7 +102,7 @@
                  <form name="form5">
                     <input type="radio" name="answer5" value="v1" /> lunch box <br />
                     <input type="radio" name="answer5" value="v2" /> clothes <br />
-                    <input type="radio" name="answer5" value="v3" /> baseball cap <br />
+                    <input type="radio" name="answer5" value="v3" /> toy car <br />
                     <input type="radio" name="answer5" value="v4" /> shoes  <br />
                     </div>
                       <input class="btn" type="button" name="선택" value="정답확인" onclick="myFucntion5()"/>
@@ -114,7 +114,7 @@
   
     <script type="text/javascript">
       function myFucntion1() {
-        if (form1.answer1[2].checked == true)
+        if (form1.answer1[1].checked == true)
           document.getElementById("check1").innerHTML = "정답입니다.";
         else document.getElementById("check1").innerHTML = "오답입니다.";
       }
@@ -126,7 +126,7 @@
       }
 
       function myFucntion3() {
-        if (form3.answer3[0].checked == true)
+        if (form3.answer3[3].checked == true)
           document.getElementById("check3").innerHTML = "정답입니다.";
         else document.getElementById("check3").innerHTML = "오답입니다.";
       }
