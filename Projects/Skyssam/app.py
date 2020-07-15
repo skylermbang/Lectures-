@@ -24,6 +24,11 @@ def froggy():
     return render_template('froggy_goestoschool.html')
 
 
+@app.route('/froggy2')
+def froggy2():
+    return render_template('froggy2_swim.html')
+
+
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
