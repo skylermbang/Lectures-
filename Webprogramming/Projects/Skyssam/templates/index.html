@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="Sky쌤 | English Book" />
+    <meta property="og:description" content="영어책읽고 퀴즈도 보자" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/og.png') }}" />
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <title> Sky쌤 | English Library</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <span class="logo_text">SKY쌤 English Book</span>
+        <a href={{ url_for('home') }}>
+        <h1 class="logo">
+          <img src="{{ url_for('static', filename='img/logo2.png') }}" />
+        </a>
+        </h1>
+        <nav class="nav">
+          <ul class="list">
+            <li class="list-item"><a href={{ url_for('overview') }}>Overview</a></li>
+            <li class="list-item"><a href={{ url_for('quiz') }}>Book Quiz</a></li>
+            <li class="list-item"><a href={{ url_for('overview') }}>About</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main"> 
+      
+      <h2 > Read English Book and Take Quiz !</h2>
+      <h3> 영어 독서 즐거운 퀴즈 와 함께 !</h3>
+      <img class="main_pic" src="{{ url_for('static', filename='img/3.png') }}"  alt="Image">
+
+
+      <div class="hero-section">
+        <div class="container main2">
+          <p class="intro-desc">
+            집에 있는 영어책 한번만 읽고 끝 ?!
+          </p>
+         <button class="cta">
+            Sky쌤이랑 공부하기
+          
+         </button>
+        </div>
+      </div>
+      <div class="container-float">
+        <div class="main-content">
+          <h2 class="main-title"> 효과 적인 영어독서 방법</h2>
+          <p class="main-desc">
+            Update예정
+          </p>
+        </div>
+
+        
+        <div class="update">
+            <h3 class="update-title">
+              <p > New Update </p>  
+                <br>
+
+           <div class="book_img">
+                <img src="{{ url_for('static', filename='img/4.png') }}"> </img>
+                  </div>
+                    <div class="book_desc">
+                       <p> Froggy Goes to school</p><br><br>
+                           </div>
+                              <br>
+                              <br>
+                              
+                                <!--<label for="search"> 책 찾아보기 </label>
+                                   <input for"serach" id="search"/>
+                                      <button> 검색</button> -->
+                                        
+                                        </div>
+                                      </div>
+    </main>
+    <footer class="footer"> All right reserved @ skyler/footer>
+  </body>
+</html>
