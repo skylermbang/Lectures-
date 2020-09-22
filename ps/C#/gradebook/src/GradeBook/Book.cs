@@ -1,25 +1,19 @@
-using System;
 using System.Collections.Generic;
-
 
 namespace GradeBook
 {
 
     class Book
     {
-        pubulic void main(double[] grades)
+        public Book()
         {
-
-
-            Console.Write("New grades>>");
-            int New_grade = int.Parse(Console.ReadLine());
-
-            var grades = new List<double>() { 95.1, 90.3, 86.3 };
-            grades.Add(new_grdade);
+            grades = new List<double>;
         }
-
+        pubulic void AddGrade(double grade)
+        {
+            grades.Add(grade);
+        }
     }
-
-
+    List<double> grades;
 
 }
