@@ -14,7 +14,7 @@
         "outputPath": "/Users/skylerbang/Desktop/Sparatcoding/ps/C#/gradebook/src/GradeBook/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/skylerbang/.nuget/NuGet/NuGet.Config"
+          "/Users/skylerbang/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
