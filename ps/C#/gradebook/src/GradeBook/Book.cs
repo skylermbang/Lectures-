@@ -40,6 +40,9 @@ namespace GradeBook
             Console.WriteLine($"The highest grade is {highGrade:N1}");
         }
 
+
+
+        //list here 
         private List<double> grades;//cant use var , using System.Collections.Generic;
         private string name;
     }
