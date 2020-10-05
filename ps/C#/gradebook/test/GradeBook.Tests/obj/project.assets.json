@@ -5616,6 +5616,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "../../src/GradeBook/Gradebook.csproj",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.1",
@@ -5635,7 +5636,7 @@
       "outputPath": "/Users/skylerbang/Desktop/Sparatcoding/ps/C#/gradebook/test/GradeBook.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/skylerbang/.nuget/NuGet/NuGet.Config"
+        "/Users/skylerbang/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5657,6 +5658,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "../../src/GradeBook/Gradebook.csproj": {
+            "target": "Package",
+            "version": "(, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.5.0, )"
@@ -5692,5 +5697,26 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency ../../src/GradeBook/Gradebook.csproj does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "../../src/GradeBook/Gradebook.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package ../../src/GradeBook/Gradebook.csproj. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "../../src/GradeBook/Gradebook.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

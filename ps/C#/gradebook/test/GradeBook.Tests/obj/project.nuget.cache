@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "4fxvpV0brfKfh0oikcjbV2MwtaDIFROqsfVDR8Ekhp0mkmHyzW6xAmRtooN3iJ28VY0eayxMx3zQ9ht+mf27QQ==",
-  "success": true,
+  "dgSpecHash": "iZkBZFDwKaqP6dZmxNQuPXBMQ12JX/cITdntqPq/ya3wquIu83ytpQJIqG1jB48BIgEB+8ToS8+FaHjRZLHHuQ==",
+  "success": false,
   "projectFilePath": "/Users/skylerbang/Desktop/Sparatcoding/ps/C#/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/skylerbang/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
@@ -96,5 +96,25 @@
     "/Users/skylerbang/.nuget/packages/xunit.extensibility.execution/2.4.1/xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "/Users/skylerbang/.nuget/packages/xunit.runner.visualstudio/2.4.0/xunit.runner.visualstudio.2.4.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency ../../src/GradeBook/Gradebook.csproj does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "../../src/GradeBook/Gradebook.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package ../../src/GradeBook/Gradebook.csproj. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "../../src/GradeBook/Gradebook.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
