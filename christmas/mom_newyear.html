@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="https://www.christmastreeassociation.org/wp-content/uploads/2016/06/multiple-christmas-trees-in-one-household-800x400.jpg"
+    />
+    <meta property="og:title" content=" Skyler's Card" />
+    <meta property="og:description" content="  Happy New Year Card" />
+    <link
+      rel="shortcut icon"
+      href="https://freepngimg.com/download/christmas/26196-6-christmas-stocking.png"
+    />
+    <title>Newyear Card</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background-color: rgb(150, 147, 147);
+      }
+
+      .envelope {
+        width: 200px;
+        height: 200px;
+
+        background-image: url("https://pngimg.com/uploads/envelope/envelope_PNG18366.png");
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+        margin-top: 200px;
+        cursor: pointer;
+      }
+
+      .envelopeMsg {
+        color: white;
+        text-align: center;
+      }
+
+      .letterClose {
+        display: block;
+      }
+
+      .letterOpen {
+        display: none;
+      }
+
+      .mainImg {
+        background-color: white;
+        background-image: url("https://imagescdn.gettyimagesbank.com/500/202011/jv12116352.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 400px;
+        height: 600px;
+        margin: auto;
+        margin-top: 60px;
+        border-radius: 180px;
+        border: 3px solid black;
+        box-shadow: 0px 0px 10px 0px black;
+      }
+
+      h1 {
+        color: black;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .msgbox {
+        color: black;
+        background-color: rgb(238, 233, 219);
+        margin: auto;
+        width: 500px;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 10px;
+        line-height: 30px;
+        box-shadow: 0px 0px 10px 0px black;
+      }
+      .from {
+        text-align: right;
+        border-right: 20px;
+        border-bottom: 0px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 760px) {
+        .msgbox {
+          width: 300px;
+          padding: 20px;
+        }
+        .mainImg {
+          background-color: white;
+          background-image: url(https://imagescdn.gettyimagesbank.com/500/202011/jv12116352.jpg);
+          background-size: cover;
+          background-position: center;
+          width: 350px;
+          height: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letterClose">
+      <div class="envelope" onclick="open_letter()"></div>
+      <h2 class="envelopeMsg">OPEN IT !</h2>
+    </div>
+
+    <div class="letterOpen">
+      <div class="mainImg" onclick="hidden()"></div>
+      <h1>Happy 2021</h1>
+      <div class="msgbox">
+        Coco 妈妈🙎‍♀️ <br />
+        新年快乐 ！ . <br />
+        妈妈 英文 每天 努力 学习！
+        <br />
+        希望 劉微， 劉场， 珉洙 多 好好学习<br />
+        2020年是不太容易的一年， <br />
+        但是 感谢神 我们都 很 健康 都很好 <br />
+        希望2021年将给我们更多成长的机会。 <br />
+        <p class="from" onclick="hiddenFunction()">🦕Skyler</p>
+      </div>
+    </div>
+
+    <script>
+      function open_letter() {
+        document.getElementsByClassName("letterClose")[0].style.display =
+          "none";
+        document.getElementsByClassName("letterOpen")[0].style.display =
+          "block";
+      }
+
+      function hiddenFunction() {
+        alert(" 被发现了啦！");
+        window.location.href = "https://ibb.co/6mk3vDF";
+      }
+    </script>
+  </body>
+</html>
