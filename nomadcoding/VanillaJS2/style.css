@@ -1,0 +1,25 @@
+body {
+  background-color: azure;
+}
+
+h1 {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.clickedColor {
+  color: red;
+}
+
+.form,
+.greeting {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
