@@ -37,7 +37,8 @@ function askName(){
 function paintGreeting(text){
     formcontainer.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `What's up ${text}!`
+    greeting.innerText = `I LOVE YOU  ❤️ ${text}!`
+
 
 }
 

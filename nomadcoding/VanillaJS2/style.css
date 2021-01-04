@@ -1,7 +1,13 @@
+* {
+  font-family: "Heebo", sans-serif;
+}
+
 body {
   background-color: #3498db;
   text-align: center;
   font-size: large;
+  border: 3px solid;
+  border-radius: 20px;
 }
 
 .btn {
@@ -21,6 +27,10 @@ body {
   display: block;
 }
 
+ul {
+  list-style: none;
+  text-emphasis: bold;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
