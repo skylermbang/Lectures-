@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
     <title>NomadCoder JS</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
@@ -11,13 +12,21 @@
       <h1 class="js-title">0:00</h1>
     </div>
 
-    <from class="js-form form">
-      <input type="text" placeholder="What Is Your Name? " />
-    </from>
+    <form class="js-form form">
+      <input type="text" placeholder="What is your name?" />
+    </form>
 
-    <h4 class="js-greeting gretting"></h4>
+    <h4 class="js-greeting greeting"></h4>
+    <form class="js-toDoForm">
+      <input type="text" placeholder="Write a to Do" />
+    </form>
+    <ul class="js-toDoList">
+      <!-- <li id="1"></li> -->
+    </ul>
 
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="background.js"></script>
   </body>
 </html>
