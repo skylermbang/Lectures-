@@ -17,6 +17,7 @@ function paintImg(imgNumber){
    // image.addEventListener("loadend" , handleImgLoad)  we dont need this cuz 
    // we are not downloading any img via API 
 
+
    image.classList("bgImage");
     
 
