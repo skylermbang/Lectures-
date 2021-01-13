@@ -6,7 +6,7 @@
   height: 100vh;
 }
 .child:nth-child(2) {
-  background-color: black;
+  background-color: rgb(90, 88, 88);
   color: white;
 }
 
