@@ -1,0 +1,23 @@
+.father {
+  display: flex;
+
+  justify-content: space-around;
+
+  height: 100vh;
+}
+
+.child {
+  height: 200px;
+  width: 200px;
+  background: rgb(159, 199, 233);
+  color: black;
+}
+
+.child:nth-child(2) {
+  order: 3;
+}
+
+.child:nth-child(1) {
+  order: 2;
+}
+/* father  tell children  but align-self do the same thing as align-item but onlt for the certain children*/

@@ -1,0 +1,31 @@
+/*rule for the flexbox 
+
+You dont talk to childeren  
+You have to have flexbox container
+*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; /* center */
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.box {
+  height: 200px;
+  background: rgb(159, 199, 233);
+  color: black;
+}
+
+/*
+
+main axis(horizontal row)  is deafulted setting of flex-direction:row(default) so you need to chagne ti
+you can move around using (justify-content : space-around/space-between 
+
+corss axis (vertical row) 
+align-item to move thing in cross axis
+ flex-direction:row(default)  * have to add height 
+align-items: center/strecth/flex-end/flex-start(default)
+*/

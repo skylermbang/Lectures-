@@ -1,0 +1,24 @@
+/*rule for the flexbox 
+
+You dont talk to childeren  
+You have to have flexbox container
+*/
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100vh;
+
+  /*this hiehgt for the continer size */
+}
+
+.box {
+  height: 200px; /* this height and width for the box size */
+  width: 200px;
+  background: rgb(159, 199, 233);
+  color: black;
+}
+
+/* 1.this dose not have the weird space between the box
+    2. Can only talk to the direct fatehr */

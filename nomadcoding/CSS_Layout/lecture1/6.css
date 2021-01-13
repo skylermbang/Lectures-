@@ -1,0 +1,25 @@
+.father {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 100vh;
+}
+.child:nth-child(2) {
+  background-color: black;
+  color: white;
+
+  flex-grow: 1;
+  /*flex-grow :0(default)  if it is 1 then take the space as much as it can 
+  flex-shrink: 1(default); shirk *2 than regular */
+}
+
+.child {
+  height: 200px;
+  width: 200px;
+  background: rgb(159, 199, 233);
+  color: black;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

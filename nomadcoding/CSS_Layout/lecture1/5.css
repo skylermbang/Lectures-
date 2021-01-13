@@ -1,0 +1,36 @@
+.father {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-content: space-around;
+
+  /*
+
+  1.
+
+  flex-direction: column-reverse/ row-reverse
+
+  /* flex-wrap: wrap;  
+  nowrap is default and whaterver happen it keep the all the kids in oneline
+     wrap : respect the origial size;
+     wrap-reverse: reverse order of wrap
+
+
+
+  2. algin-content :  center /space-betwwen /space-around /flex-end
+     the space between first row and second row 
+  */
+}
+
+.child {
+  height: 200px;
+  width: 200px;
+  background: rgb(159, 199, 233);
+  color: black;
+  font-size: 50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* even if setted width this all 6boxs are going to squeezed in oneline *

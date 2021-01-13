@@ -1,0 +1,21 @@
+.box {
+  background: violet;
+  width: 150px;
+  height: 150px;
+
+  display: inline-block;
+
+  /* display : block(default)  has huge margin by the side no element next 
+    display : inline-block : keep being block and can be next each other
+    display : inline :  not box just same line not a box and cat use with wid&height
+
+    and this box has weird space between them as default
+*/
+}
+
+.box:nth-child(3) {
+  margine-left: 10px;
+}
+/* this let us change the each box location
+but it is not responsive desing it will more likly 
+go bad in other scrren size*/
