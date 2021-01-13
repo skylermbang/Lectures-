@@ -21,8 +21,8 @@ https://tour.golang.org/flowcontrol/1
 https://nomadcoders.co/javascript-for-beginners/lobby
 -CSS Layout
 
-Vanilla JS Challenge
-CSS Layout Challenge
+-Vanilla JS Challenge
+-CSS Layout Challenge
 
 -GO language
 
