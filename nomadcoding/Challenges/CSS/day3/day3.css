@@ -1,0 +1,71 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  background-color: #dde1d4;
+  padding: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 650px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 120px 45% 35%; /* no , bettwen*/
+  grid-template-areas:
+    "header header header"
+    "content content nav"
+    "footer footer footer";
+
+  gap: 15px;
+}
+
+header {
+  background-color: black;
+  grid-area: header;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header:first-child {
+}
+
+.content {
+  background-color: red;
+  grid-area: content;
+  font-size: 17vh;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+}
+
+.nav {
+  background-color: red;
+  grid-area: nav;
+}
+.footer {
+  background-color: red;
+  grid-area: footer;
+  margin-top: 10px;
+}
+
+.footer > h2 {
+  font-size: 15vh;
+  font-weight: bold;
+}
+
+.footer div {
+  margin-top: 20px;
+  color: #dde1d4;
+  font-size: 3vh;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
