@@ -66,6 +66,6 @@ header:first-child {
   font-size: 3vh;
   font-weight: bold;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* make it in to two differnt lines*/
   margin-left: 10px;
 }

@@ -1,0 +1,152 @@
+
+
+
+/*
+###################2.1  #############################
+Grid  most of time you talk to father like you did for the flexbox 
+
+
+.father {
+  display: grid;
+  grid-template-columns: 20px 50px 100px 200px;  (no , betwwen )
+}
+
+
+
+
+
+######################    2.2 ################################
+.father {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 250px);
+  gap: 10px;
+}
+
+.child {
+  flex-basis: 30%;
+  background: rgb(252, 214, 177);
+  color: black;
+}
+
+
+ ##################### 2.3 ################################
+ .father {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer ";
+}
+
+.child {
+  flex-basis: 30%;
+  background: rgb(252, 214, 177);
+  color: black;
+}
+
+.header {
+  background-color: beige;
+  grid-area: header;
+}
+
+.nav {
+  background-color: rgb(185, 243, 158);
+  grid-area: nav;
+}
+
+.content {
+  background-color: rgb(122, 86, 110);
+  grid-area: content;
+}
+
+.footer {
+  background-color: rgb(100, 116, 168);
+  grid-area: footer;
+}
+
+ 
+
+##################### 2.4################################
+.father {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+}
+
+.child {
+  flex-basis: 30%;
+  background: rgb(252, 214, 177);
+  color: black;
+}
+
+.header {
+  background-color: beige;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.nav {
+  background-color: rgb(185, 243, 158);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.content {
+  background-color: rgb(122, 86, 110);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.footer {
+  background-color: rgb(100, 116, 168);
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+
+
+ ##################### 2.5 ################################
+ .father {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+}
+
+.child {
+  flex-basis: 30%;
+  background: rgb(252, 214, 177);
+  color: black;
+}
+
+.header {
+  background-color: beige;
+  grid-column: 1/-1;   -1 : the last one 
+}
+
+.nav {
+  background-color: rgb(185, 243, 158);
+  grid-column: 4/5;
+  grid-row: 2/4;
+}
+
+.content {
+  background-color: rgb(122, 86, 110);
+  grid-column: 1/4;
+  grid-row: 2/4;
+}
+
+.footer {
+  background-color: rgb(100, 116, 168);
+  grid-column: span 4;
+}
