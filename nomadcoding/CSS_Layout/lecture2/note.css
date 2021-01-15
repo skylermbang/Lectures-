@@ -150,3 +150,48 @@ Grid  most of time you talk to father like you did for the flexbox
   background-color: rgb(100, 116, 168);
   grid-column: span 4;
 }
+
+
+ ##################### 2.6 ################################
+
+ ##################### 2.9################################
+  justify-content : 
+   start (default) , center (move the whole grid to center) , 
+   space-around / space-evenly / space-betwwen   : horizon stuff
+
+ aling-contetn :
+   first of all have to have height:  (200vh?)
+   start (default)
+   end (go to down)
+   stretch( stretch if  grid-template-rows:repeat(4, 1fr) )
+
+ place-content : vertical horizontal ;
+
+
+
+##################### 2.10 ################################
+
+ for the individual cell 
+ aling-self: 
+ justify-self:
+ place-self: (vertical horizontal)
+
+grid-auto-rows: 100px ; 
+ if you have more contents than the row , than the auto size of 100px will come   
+ + you have to have the grid-template-row: repeat(4 100px); already 
+
+grid-auto-flow: columns/ row(default)
+ in stead you add more rows you want to have new colums 
+ grid-auto-column: 100px;
+ normally you will stick with rows 
+
+##################### 2.11################################
+grid-template-columns: repeat(2, minma(100px, 1fr));
+
+##################### 2.12################################
+
+repreat(auto-fill, minmax(1fr,2fr);    auto fill the width with  , more place
+repreat(auto-fit, minmax(1fr,2fr);  strecth the content ,  its strecth 
+##################### 2.8 ################################
+
+##################### 2.8 ################################

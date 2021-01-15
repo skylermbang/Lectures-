@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.countdown-container {
+  display: flex;
+}
+
+.p-container {
+  display: flex;
+}

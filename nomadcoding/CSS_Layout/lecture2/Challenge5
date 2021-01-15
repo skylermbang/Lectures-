@@ -1,0 +1,185 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&family=Sacramento&display=swap');
+
+body {
+  font-family: 'Fraunces', serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 100;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10%;
+}
+
+.text > h2 {
+  font-size: 1.6rem;
+  font-family: 'Fraunces', serif;
+}
+
+.text > h3 {
+  font-size: 1rem;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+}
+
+.main > div:nth-child(2) {
+  background-color: #D9D4CF;
+}
+
+.main > div:nth-child(3) {
+  background-image: url("image/ranurte-_1V5EkE3OOM-unsplash.jpg");
+  background-size: cover;
+}
+
+.main > div:nth-child(4) {
+  background-color: #DE7E73;
+}
+
+.main > div:nth-child(5) {
+  background-image: url("image/bechir-kaddech-YC5EmkMEPLU-unsplash.jpg");
+  background-size: cover;
+}
+
+.main > div:nth-child(6) {
+  background-color: #AAABD3;
+}
+
+.main > div:nth-child(7) {
+  background-color: #ABD0CE;
+}
+
+.main > div:nth-child(8) {
+  background-color: #AF4034;
+}
+
+.main > div:nth-child(9) {
+  background-color: #6AAFE6;
+}
+
+.main > div:nth-child(10) {
+  background-image: url("image/dmitriy-frantsev-BsUCjdZEicU-unsplash.jpg");
+  background-size: cover;
+}
+
+.main > div:nth-child(11) {
+  background-color: #77AAAD;
+}
+
+.main > div:nth-child(12) {
+  background-image: url("image/tyler-moore-hwlPJebtcCg-unsplash.jpg");
+  background-size: cover;  
+}
+
+.main > div:nth-child(13) {
+  background-color: #CBA6C3;
+}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <h1>Foreword, Contributors</h1>
+      </header>
+      <div class="text">
+          <h2>
+            Tools for Slowing<br>
+            Down
+          </h2>
+          <h3>Chloe Geoghegan & Chloe Reith</h3>
+      </div>
+      <div class="image"></div>
+      <div class="text">
+        <h2>
+          The (Old) New<br>
+          Spirit of Curating<br>
+          and Myths of<br>
+          Nomadism
+        </h2>
+        <h3>Tim Gentles</h3>
+      </div>
+      <div class="image"></div>
+      <div class="text">
+        <h2>
+          Pressing<br>
+          Singularities
+        </h2>
+        <h3>
+          Tendai John Mutambu &<br>
+          Robyn Maree Pickens
+        </h3>
+      </div>
+      <div class="text">
+        <h2>
+          We're in This<br>
+          Together
+        </h2>
+        <h3>Vera Mey</h3>
+      </div>
+      <div class="text">
+        <h2>
+          The Curatorial as a<br>
+          Liveable Subject<br>
+          Position:<br>
+          Hospitality and<br>
+          Differential<br>
+          Consciousness
+        </h2>
+        <h3>Danny Butt</h3>
+      </div>
+      <div class="text">
+        <h2>
+          Community,<br>
+          Community Art,<br>
+          Community Art in<br>
+          Howick
+        </h2>
+        <h3>Balamohan Shingade</h3>
+      </div>
+      <div class="image"></div>
+      <div class="text">
+        <h2>Feeling Welcome?</h2>
+        <h3>
+          Louisa Afoa &<br>
+          loana Gordon-Smith
+        </h3>
+      </div>
+      <div class="image"></div>
+      <div class="text">
+        <h2>On Friendship</h2>
+        <h3>Rebecca Boswell</h3>
+      </div>
+    </div>
+  </body>
+</html>

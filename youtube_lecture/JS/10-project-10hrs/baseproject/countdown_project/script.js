@@ -9,8 +9,8 @@ function countdown(){
 
     const targetDate = new Date(targetYear);
     const currentDate = new Date();
-    const diff = ( targetDate - currentDate) /1000;
-    const days = Math.floor(diff/ 3600 /24);
+    const diff = ( targetDate - currentDate) /1000;     // miliseconds / 1000 => seconds 
+    const days = Math.floor(diff/ 3600 /24); // second / 3600 /24 
     const hours = Math.floor(diff/3600)%24;
     const mins = Math.floor(diff/60)%60;
     const seconds = Math.floor(diff % 60);
@@ -22,7 +22,7 @@ function countdown(){
     minsEl.innerHTML= `${mins < 10 ? `0${mins}` : mins}`;
     secondsEl.innerHTML= `${seconds < 10 ? `0${seconds}` : seconds}`;
 
-};
+}; 
 
 
 
