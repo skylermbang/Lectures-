@@ -1,0 +1,156 @@
+.container {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  flex-basis: 300px;
+  width: 100%;
+  background-color: peru;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:nth-child(2){
+   background-color: black;
+   flex-shrink: 1;
+}
+
+/*
+############################## lecture 1.0  ##################################
+
+
+default display : block  ; wont let other content to next each other
+        display : inline-block ;  keep being block + can be next eachother
+
+         inline = element that fluid , same line  (text is inline _ not box) so inline-box = box next eachother
+       
+         but if you use inline-box => there is small gap we cant controle.
+ 
+you can use .classname:nth-child() to control each childeren 
+
+.box {
+  background-color: blue;
+
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 40px;
+  display: inline-box
+}
+
+############################## lecture 1.1 ##################################
+
+flexbox ; we only talk to the father ; 
+
+.container {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: peru;
+}
+
+you talk to the direct father to make it flex;
+you make wrappaer
+
+############################## lecture 1.2 ##################################
+
+flex-direction : row (default) ; horizontal  (main axis)
+                  column : vertical 
+
+justify-content :moving horizontally ; center ; space-between ; space-around;
+align-items: moving vertically ; make sure the father has the height!!!! important!
+
+
+
+
+############################## lecture 1.3 ##################################
+
+
+main-axis ; vertical axis ; two different concept very important 
+
+
+
+
+
+############################## lecture 1.4 ##################################
+
+
+align-self : give it to the child
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: peru;
+}
+
+.box:nth-child(1) {
+  align-self: start;
+}
+
+.box:nth-child(2) {
+  align-self: center;
+}
+
+.box:nth-child(3) {
+  align-self: flex-end;
+}
+
+
+you can change order : and this you give it to the child 
+
+
+nth-child(
+.box:nth-child(1) {
+  order: 1;
+}
+
+order : default : 0;
+order : 1 
+)
+
+
+############################## lecture 1.5 ##################################
+
+flex box try to make everthing in one line even if the child has its own widht;
+so what you need to do is 
+
+
+
+
+
+flex-wrap: wrap ; (respect the child width)
+           nowrap ;(default and put everthing in one line)
+           wrap-reverse ; opposite directoin
+
+flex-direction ; row-reverse ; colum-revers
+***align-content : for the line ; not like align-item!!!!!  very important!!!
+
+
+############################## lecture 1.6 ##################################
+
+flex-shrink :   default 1 ,  2= 1 x 2 
+flex-grow:  default 0 , 1 2 3 > make the box take the space 
+this is good for the responsive desgin ! 
+
+
+############################## lecture 1.7 ##################################
+flex basis it can be width ( when flex-directoin is coulmn) or can be height(when it is coulmn);
+
+
+
+
+############################## lecture 1.5 ##################################
+############################## lecture 1.5 ##################################
+############################## lecture 1.5 ##################################
