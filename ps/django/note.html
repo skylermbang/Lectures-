@@ -1,5 +1,7 @@
 <!--
-### 1.1 Django: Getting Started ###
+
+     Django: Getting Started
+### 1.2 Django: Sratrgin a Django proejct ###
  Python Basic of HTML Django : Python web framework
 ORM/Admin : powerful tools Template ,URL mapping, Forms , packages
 
@@ -29,23 +31,45 @@ asgi.py , wsgi.py : deployment to the production server
 
 
 
-### 1.2 Django app  ####
+### 1.3 Creating a Simple Web Page  ####
 create  app ? 
 
 go to the project folder (meeting_planner)
-python manage.py startapp website 
- => once you create the app you want to build , delte  admin.py, apps.py, models.py, tests.py
-   and go back to the main settings.py and add the app in the INSTALLED_APP
+
+
+you can make an app using :
+python manage.py startapp app_name
+
+
+
+ => once you create the app you want to build , delte  admin.py, apps.py, models.py, tests.py (delete the migrataion file too)
+   and go back to the main settings.py and add the app in the INSTALLED_APPa
+
+
+
+first of all you have to make views.py 
+     from django.http import HttpResponse
+
+     def welcome(request):
+    return HttpResponse("What sup this is skyler's django first page")
+
+and urls.py :   you need to import the views and the function and map the url 
+from website.views import welcome
+    path('welcome.html', welcome)
+
+
+    path('', welcome) // empty url for the main page
+
+    1. make view function 
+    2. import the function in the urls.py
+    3. url mapping
+    4. setting add the app 
+    
+    in the production  make sure you turn off the debug true
 
 
 
 
 
-
-
-
-
-
-
-
+### 1.4 Data Model  ####    
 -->
