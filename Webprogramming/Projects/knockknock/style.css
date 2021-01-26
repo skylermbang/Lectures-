@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 15px;
+  padding: 16px;
 }
 
 .logo-img {
