@@ -54,9 +54,10 @@ header {
   background-color: rgb(190, 189, 189);
 }
 
+/*
 div {
   background-color: ;
-}
+}*/
 
 .religion {
   grid-area: religion;
@@ -82,7 +83,7 @@ h2 {
   display: grid;
   width: 100%;
 
-  grid-template-rows: 50px 1000px;
+  grid-template-rows: 50px 300px;
   grid-template-areas:
     "title "
     "graph-content";
@@ -110,14 +111,32 @@ h2 {
   text-align: center;
   display: grid;
   border-bottom: 1px solid black;
-
   grid-template:
     "box1 box2" 200px
     "box3 box4" 200px / 1fr 1fr;
 }
 
+.box1 {
+  display: grid;
+  justify-content: center;
+}
+
+.box2 {
+  display: grid;
+  justify-content: center;
+}
+.box3 {
+  display: grid;
+  justify-content: center;
+}
+
+.box4 {
+  display: grid;
+  justify-content: center;
+}
 .row2 {
   margin-left: 20px;
+  margin-top: 150px;
 }
 
 .row3 {
@@ -135,10 +154,25 @@ h2 {
   border-bottom: 1px solid black;
 }
 
-.row5 {
+.row6 {
   padding-top: 20px;
   text-align: center;
   font-size: 2rem;
+}
+
+.row5 {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  height: auto;
+  border-bottom: 1px solid black;
+}
+
+.row9 {
+  height: auto;
 }
 
 .box1,
@@ -207,4 +241,32 @@ h2 {
 .button3:hover {
   background-color: #f44336; /* Green */
   color: white;
+}
+
+.user-img {
+  width: 200px;
+  height: 100px;
+}
+
+.booster-img {
+  width: 200px;
+  height: 100px;
+}
+
+.feature-img {
+  width: 200px;
+  height: 100px;
+}
+
+.feature-img2 {
+  width: 200px;
+  height: 100px;
+}
+
+.problem-list {
+  display: none;
+}
+
+.solution-list {
+  display: none;
 }
