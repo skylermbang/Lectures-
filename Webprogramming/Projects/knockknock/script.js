@@ -22,6 +22,23 @@ const PROBLEMLIST = document.querySelector(".problem-list");
 const SOLUTIONLISTBTN = document.querySelector(".solution-list-btn");
 const SOLUTIONLIST = document.querySelector(".solution-list");
 
+
+
+
+const PROBLEMFORM = document.querySelector(".js-problem-form");
+const PROBLEMINPUT = PROBLEMFORM.querySelector("input");
+const PROBLEMLIST2 = document.querySelector(".js-problem-list");
+
+
+
+
+
+
+
+
+
+
+
 var imgCheck1 = true;
 var imgCheck2 = true;
 
@@ -33,6 +50,81 @@ var imgCheck6 = true;
 
 var imgCheck7 = true;
 var imgCheck8 = true;
+
+
+
+
+
+
+
+const PROBLEM_LS = "PROBLEMS";
+const PROBLEM_LIST_ARRAY = [];
+
+function loadProblem(){
+
+  const Problems = localStorage.getItem(PROBLEM_LS);
+
+
+
+  if(  Problems !== null){
+    const parsedProblem = JSON.parse(Problems);
+    parsedProblem.forEach(function(showproblems){
+      paintProblem(PROBLEM_LIST_ARRAY.text);
+    });
+
+
+  } 
+}
+
+function saveList(){
+  localStorage.setItem(PROBLEM_LS, JSON.stringify(PROBLEM_LIST_ARRAY));
+}
+
+
+function paintProblem(text){
+  console.log(text);
+  const li = document.createElement("li");
+  const button = document.createElement("button");
+  const newId = PROBLEM_LIST_ARRAY.length + 1;
+  button.innerHTML = " X ";
+  const span = document.createElement("span");
+  span.innerText= text;
+  li.appendChild(span);
+  li.appendChild(button);
+  li.id = newId;
+  PROBLEMLIST2.appendChild(li);
+  const ProblemObject = {
+
+    text : text,
+    id : newId
+    
+
+  };
+
+  PROBLEM_LIST_ARRAY.push(ProblemObject);
+  saveList();
+
+
+
+
+}
+
+function handleSubmit(){
+  event.preventDefault();
+  const currentValue= PROBLEMINPUT.value;
+  paintProblem(currentValue);
+  PROBLEMINPUT.value="";
+
+}
+
+
+
+
+
+
+
+
+
 
 function openCard2() {
 
@@ -180,6 +272,13 @@ function init(){
   BOOSTERCARDBTN2.addEventListener("click", openCard8);
   PROBLEMLISTBTN.addEventListener("click", openProblemList);
   SOLUTIONLISTBTN.addEventListener("click", openSolutionList);
+
+
+  loadProblem();
+  PROBLEMFORM.addEventListener("submit", handleSubmit);
+
+
+
 }
 
 
