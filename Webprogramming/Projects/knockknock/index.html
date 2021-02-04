@@ -1,168 +1,216 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>  KnockKnock </title>
-      <link href="style.css" rel="stylesheet" type="text/css" />
-   </head>
-   <body>
-      <header>
-         <ul>
-            <img class="logo-img" src="/logo.png">
-         </ul>
-         <ul>
-            <li>KnocKnock </li>
-            <li> Unlocking the business inside you</li>
-         </ul>
-         <ul>
-            <li> Testing Phase2 </li>
-            <li> Blahblah </li>
-         </ul>
-      </header>
-      <div class="bad">
-         <iframe width="600" height="400"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-         </iframe>
-         <h2>KnockKonck</h2>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>KnockKnock</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <img class="logo-img" src="/logo.png" />
+      </ul>
+      <ul>
+        <li>KnocKnock</li>
+        <li>Unlocking the business inside you</li>
+      </ul>
+      <ul>
+        <li>Testing Phase2</li>
+        <li>Blahblah</li>
+      </ul>
+    </header>
+    <div class="bad">
+      <iframe
+        width="600"
+        height="400"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+      >
+      </iframe>
+      <h2>KnockKonck</h2>
+    </div>
+    <div class="bad-next"></div>
+    <div class="religion">
+      <h2>Instruction of Game</h2>
+      <div>
+        <span> Very briefly </span>
+        <span>bullet points</span>
       </div>
-      <div class="bad-next"></div>
-      <div class="religion">
-         <h2>Instruction of Game </h2>
-         <div>
-            <span> Very briefly </span>
-            <span>bullet points</span>
-         </div>
+    </div>
+    <div class="graph-container">
+      <h2 class="title">Instruction</h2>
+      <div class="graph-content-container">
+        <div class="row0">4 CARDS</div>
+        <div class="row1">
+          <div class="box1 box1-js">
+            <h1>USER</h1>
+
+            <button class="user-card-button-js">EXPLAIN</button>
+            <p class="user-explain user-explain-js">
+              The user is also your target market for whom you will be
+              brainstorming the possible problems and solutions.
+            </p>
+            <button class="user-card-button-js2">GET MY CARD</button>
+            <img class="user-img user-card-js" src="/user.jpeg" />
+          </div>
+
+          <div class="box2">
+            FEATURE
+            <button class="feature-card-button-js">EXPLAIN</button>
+            <p class="feature-explain feature-explain-js">
+              The features are tools that you will use as a catalyst to support
+              and develop your ideas addressing the problems and solutions for
+              your given user (target market).
+            </p>
+            <button class="feature-card-button-js2">GET MY CARD</button>
+            <img class="feature-img feature-card-js" src="/feature.jpeg" />
+          </div>
+
+          <div class="box3">
+            FEATURE
+            <button class="feature2-card-button-js">EXPLAIN</button>
+            <p class="feature2-explain feature2-explain-js">
+              The features are tools that you will use as a catalyst to support
+              and develop your ideas addressing the problems and solutions for
+              your given user (target market).
+            </p>
+            <button class="feature2-card-button-js2">GET MY CARD</button>
+            <img class="feature2-img feature2-card-js" src="/feature.jpeg" />
+          </div>
+
+          <div class="box4">
+            BOOSTER
+            <button class="booster-card-button-js">EXPLAIN</button>
+            <p class="booster-explain booster-explain-js">
+              A booster can help you enhance and add more perspectives to your
+              thought process in the context of user and feature. You may use it
+              but it is not compulsory.
+            </p>
+            <button class="booster-card-button-js2">GET MY CARD</button>
+            <img class="booster-img booster-card-js" src="/booster.jpeg" />
+          </div>
+        </div>
       </div>
-      <div class="graph-container">
-         <h2 class="title"> Instruction </h2>
-         <div class="graph-content-container">
-            <div class="row0"> 4 CARDS </div>
-            <div class="row1">
-               <div class="box1 box1-js"> <h1>  USER </h1>
-                  
-                
-                  <button class="user-card-button-js" >  EXPLAIN </button>
-                  <p class="user-explain user-explain-js"> The user is also your target market for whom you will be brainstorming the possible problems and solutions.</p>
-                  <button class="user-card-button-js2"  >  GET MY CARD </button>
-                  <img class="user-img user-card-js" src="/user.jpeg">
-                
-               </div>
 
+      <div class="row4">
+        <div class="box5">
+          <h3>
+            Problems: Write down as many problems as you can with regards to
+            your assigned user (target market)
+          </h3>
+          List the Possible Problems
+          <div>
+            <button class="problem-list-btn">Open</button>
+          </div>
+          <ul class="problem-list">
+            <li>Most significant and urgent problem your user faces</li>
+            <li>Least significant and urgent problem your user faces</li>
+            <li>Long term problems your user faces</li>
+            <li>Short term problems your user faces</li>
+          </ul>
 
-               <div class="box2"> FEATURE
-                  <button class="feature-card-button-js" >  EXPLAIN </button>
-                  <p class="feature-explain feature-explain-js"> The features are tools that you will use as a catalyst to support and develop your ideas addressing the problems and solutions for your given user (target market).</p>
-                  <button class="feature-card-button-js2"  >  GET MY CARD </button>
-                  <img class="feature-img feature-card-js" src="/feature.jpeg">
-               </div>
+          <form action="" class="js-problem-form form">
+            <input
+              type="text"
+              placeholder=" List the problems (press enter to make the problem list)"
+              rows="10"
+              cols="10"
+              size="70"
+            />
+          </form>
+          <ul class="js-problem-list"></ul>
+        </div>
+        <div class="box6">
+          Problem Leads to Solutions
+          <div>⬇️ ⬇️ ⬇️ ⬇️</div>
+        </div>
+        <div class="box7">
+          Write down as many solutions as you can with regards to your assigned
+          user (target market)
 
-
-
-               <div class="box3"> FEATURE
-                  <button class="feature2-card-button-js" >  EXPLAIN </button>
-                  <p class="feature2-explain feature2-explain-js"> The features are tools that you will use as a catalyst to support and develop your ideas addressing the problems and solutions for your given user (target market).</p>
-                  <button class="feature2-card-button-js2"  >  GET MY CARD </button>
-                  <img class="feature2-img feature2-card-js" src="/feature.jpeg">
-               </div>
-
-
-
-               <div class="box4"> BOOSTER
-                  <button class="booster-card-button-js" >  EXPLAIN </button>
-                  <p class="booster-explain booster-explain-js">  A booster can help you enhance and add more perspectives to your thought process in the context of user and feature. You may use it but it is not compulsory. </p>
-                  <button class="booster-card-button-js2"  >  GET MY CARD </button>
-                  <img class="booster-img booster-card-js" src="/booster.jpeg">
-               </div>
+          <div>
+            <button class="solution-list-btn">Open</button>
+          </div>
+          <ul class="solution-list">
+            <li>Most significant and urgent solutions for user</li>
+            <li>Least significant and urgent solution for user</li>
+            <li>Long term solutions for user</li>
+            <li>Short term solutions for user</li>
+          </ul>
+          <form action="" class="js-solution-form form2">
+            <input
+              type="text"
+              placeholder=" List the Solutions (press enter to make the solution list)"
+              rows="10"
+              cols="10"
+              size="70"
+            />
+          </form>
+          <ul class="js-solution-list"></ul>
+        </div>
+      </div>
+      <div class="row5">
+        <div class="box5">
+          What is the most important problem ?
+          <div>
+            <button class="what-btn">Open</button>
+            <div class="what-content">
+              <p>What is the problem that needs urgent addressing?</p>
+              <li>
+                Narrow down to the most significant and urgent problem (you
+                could combine 1 or more problems if it is related)
+              </li>
+              <li>
+                Look at the big picture so try to focus on long term problems
+              </li>
             </div>
-         </div>
-  
-         
 
+            <div class="what-container">
+              <textarea
+                class="what"
+                id="what"
+                name="story"
+                rows="5"
+                cols="33"
+                placeholder=" List the Solutions (press enter to make the solution list)"
+              >
+              </textarea>
+              <div>
+                <button onclick="saveWhat()">Submmit</button>
+              </div>
 
-         <div class="row4">
-            <div class="box5">
-               <h3>Problems: Write down as many problems as you can with regards to your assigned user (target market)</h3>
-               List the Possible Problems
-               <div>
-                  <button class="problem-list-btn" > Open </button>
-               </div>
-               <ul class="problem-list">
-                 <li> Most significant and urgent problem your user faces</li>
-                 <li>Least significant and urgent problem your user faces</li>
-                 <li>Long term problems your user faces</li>
-                 <li>Short term problems your user faces</li>
-                  
-               </ul>
-
-               <form action="" class="js-problem-form form ">
-
-                  <input type="text" placeholder=" List the problems (press enter to make the problem list)" rows="100" cols="100" size= "70"/>
-
-               </form>
-               <ul class="js-problem-list "></ul>
+              <h2>Most important problem</h2>
+              <p id="demo"></p>
             </div>
-            <div class="box6">
-               Problem Leads to Solutions 
-               <div> ⬇️  ⬇️  ⬇️  ⬇️ </div>
-            </div>
-            <div class="box7">
-               List the possible solutoins
-               <div>
-                  <button class="solution-list-btn" > Open </button>
-               </div>
-               <ul class="solution-list">
-                  <li> problem 1</li>
-                  <li> skyler is too good</li>
-                  <li>skyler is too smart</li>
-                  <li> skyler is too good</li>
-               </ul>
-            </div>
-         </div>
-         <div class="row5">
-            <div class="box5">
-               What is the most important problem ?
-               <div>
-                  <button> Open </button>
-                  <ul class="js-problem-list "></ul>
-               </div>
-            </div>
-            <div class="box6">
-               Why do you think this is the most important problem ?
-               <div>
-                  <button> Open </button>
-               </div>
-            </div>
-            <div class="box7">
-               How are you going to solve the problem ?
-               <div>
-                  <button> Open </button>
-               </div>
-            </div>
-         </div>
-         <div class="row6">
+          </div>
+          <div class="box6">
+            Why do you think this is the most important problem ?
             <div>
-               <h1> Your choice for commnunicating your solutoin</h1>
+              <button>Open</button>
             </div>
-            <button class="button button1"> Tangible</button>
-            <button class="button button2"> Digital </button>
-            <button class="button button3"> Service</button>
-         </div>
-         <div class="row9">
-            With all the brainstorming, time to make a businss plan
-            <div> <button>OPEN</button></div>
-         </div>
+          </div>
+          <div class="box7">
+            How are you going to solve the problem ?
+            <div>
+              <button>Open</button>
+            </div>
+          </div>
+        </div>
+        <div class="row6">
+          <div>
+            <h1>Your choice for commnunicating your solutoin</h1>
+          </div>
+          <button class="button button1">Tangible</button>
+          <button class="button button2">Digital</button>
+          <button class="button button3">Service</button>
+        </div>
+        <div class="row9">
+          With all the brainstorming, time to make a businss plan
+          <div><button>OPEN</button></div>
+        </div>
       </div>
-      </div>
-      <div class="bad-next3">
-         <h2> Screen Recording  </h2>
-         <div>
-            <span>aaaaaa</span>
-            <span>bbbbb</span>
-         </div>
-      </div>
-   
-    
-      <script src="script.js"></script>
-   </body>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

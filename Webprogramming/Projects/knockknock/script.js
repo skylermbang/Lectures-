@@ -31,10 +31,18 @@ const PROBLEMLIST2 = document.querySelector(".js-problem-list");
 
 
 
+const SOLUTIONMFORM = document.querySelector(".js-solution-form");
+const SOLUTIONINPUT = SOLUTIONMFORM.querySelector("input");
+const SOLUTIONLIST2 = document.querySelector(".js-solution-list");
 
 
 
 
+
+
+const WHATBTN = document.querySelector(".what-btn");
+const WHATCONTENT = document.querySelector(".what-content");
+const WHATCONTAINER = document.querySelector(".what-container");
 
 
 
@@ -52,24 +60,84 @@ var imgCheck7 = true;
 var imgCheck8 = true;
 
 
-
-
-
-
-
 const PROBLEM_LS = "PROBLEMS";
-const PROBLEM_LIST_ARRAY = [];
+let PROBLEM_LIST_ARRAY = [];
 
+
+
+
+const SOLUTION_LS = "SOLUTIONS";
+let SOLUTION_LIST_ARRAY = [];
+
+
+
+function showWhat(){
+
+  WHATCONTENT.style.display="block";
+
+
+}
+
+
+function delProblemList(event){
+ console.log(event.target.parentNode);
+ 
+  const btn1 = event.target;
+  const li = btn1.parentNode;
+  
+  PROBLEMLIST2.removeChild(li);
+
+  const cleanProblemList = PROBLEM_LIST_ARRAY.filter(function(list) {
+    return list.id !== parseInt(li.id);
+  });
+
+
+  
+  PROBLEM_LIST_ARRAY = cleanProblemList;
+  saveList();
+
+
+}
+
+function delSolutionList(event){
+  console.log(event.target.parentNode);
+  
+   const btn1 = event.target;
+   const li = btn1.parentNode;
+   
+   SOLUTIONLIST2.removeChild(li);
+ 
+   const cleanSolutionList = SOLUTION_LIST_ARRAY.filter(function(list) {
+     return list.id !== parseInt(li.id);
+   });
+ 
+ 
+   
+   SOLUTION_LIST_ARRAY = cleanSolutionList;
+   saveList2();
+ 
+ 
+ }
 function loadProblem(){
 
-  const Problems = localStorage.getItem(PROBLEM_LS);
-
-
-
+  const Problems = localStorage.getItem(SOLUTION_LS);
   if(  Problems !== null){
     const parsedProblem = JSON.parse(Problems);
     parsedProblem.forEach(function(showproblems){
-      paintProblem(PROBLEM_LIST_ARRAY.text);
+      paintProblem(showproblems.text);
+    });
+
+
+  } 
+}
+
+function loadSolution(){
+
+  const Solutions = localStorage.getItem(SOLUTION_LS);
+  if(  Solutions !== null){
+    const parsedSolutions = JSON.parse(Solutions);
+    parsedSolutions.forEach(function(showpSolutions){
+      paintSolutions(showpSolutions.text);
     });
 
 
@@ -80,11 +148,15 @@ function saveList(){
   localStorage.setItem(PROBLEM_LS, JSON.stringify(PROBLEM_LIST_ARRAY));
 }
 
+function saveList2(){
+  localStorage.setItem(SOLUTION_LS, JSON.stringify(SOLUTION_LIST_ARRAY));
+}
 
 function paintProblem(text){
   console.log(text);
   const li = document.createElement("li");
   const button = document.createElement("button");
+  button.addEventListener("click",delProblemList);
   const newId = PROBLEM_LIST_ARRAY.length + 1;
   button.innerHTML = " X ";
   const span = document.createElement("span");
@@ -100,9 +172,34 @@ function paintProblem(text){
     
 
   };
-
   PROBLEM_LIST_ARRAY.push(ProblemObject);
   saveList();
+
+}
+
+function paintSolutions(text){
+    console.log(text);
+    const li = document.createElement("li");
+    const button = document.createElement("button");
+    button.addEventListener("click",delSolutionList);
+    const newId = SOLUTION_LIST_ARRAY.length + 1;
+    button.innerHTML = " X ";
+    const span = document.createElement("span");
+    span.innerText= text;
+    li.appendChild(span);
+    li.appendChild(button);
+    li.id = newId;
+    SOLUTIONLIST2.appendChild(li);
+    const SolutionObject = {
+  
+      text : text,
+      id : newId
+      
+  
+    };
+
+  SOLUTION_LIST_ARRAY.push(SolutionObject);
+  saveList2();
 
 
 
@@ -116,6 +213,15 @@ function handleSubmit(){
   PROBLEMINPUT.value="";
 
 }
+
+function handleSubmit2(){
+  event.preventDefault();
+  const currentValue= SOLUTIONINPUT.value;
+  paintSolutions(currentValue);
+  SOLUTIONINPUT.value="";
+
+}
+
 
 
 
@@ -185,7 +291,7 @@ function openCard3(){
   FEATURECARDBTN2.style.display = "block";
   FEATURECARDBTN.style.display = "none";
 
-  }
+  };
 }
 
 function openCard6() {
@@ -260,6 +366,15 @@ function openSolutionList(){
 }
 
 
+function saveWhat() {
+  var x = document.getElementById("what").value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+
+
+
+
 function init(){
 
   USERCARDBTN.addEventListener("click" , openCard1);
@@ -273,11 +388,17 @@ function init(){
   PROBLEMLISTBTN.addEventListener("click", openProblemList);
   SOLUTIONLISTBTN.addEventListener("click", openSolutionList);
 
+  
 
-  loadProblem();
   PROBLEMFORM.addEventListener("submit", handleSubmit);
+  loadProblem();
 
 
+
+  SOLUTIONMFORM.addEventListener("submit", handleSubmit2);
+  loadSolution();
+
+  WHATBTN.addEventListener("click", showWhat);
 
 }
 

@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 110px 45% 35% 200% 70% 70% 70% 70%;
+  grid-template-rows: 110px 500px 500px 700px 400px 500px 500px 500px;
   gap: 10px;
   grid-template-areas:
     "header header header"
@@ -24,7 +24,7 @@ body {
 }
 
 header {
-  background: rgb(46, 70, 46);
+  background: rgb(171, 174, 171);
   grid-area: header;
   color: rgb(36, 37, 34);
   display: flex;
@@ -138,13 +138,9 @@ h2 {
 .row4 {
   margin-top: 350px;
   background-color: yellow;
-  padding-bottom: 20px;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-
-  justify-content: space-between;
-  height: auto;
   border-bottom: 1px solid black;
 }
 
@@ -159,8 +155,8 @@ h2 {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-
-  justify-content: space-between;
+  background-color: aliceblue;
+  justify-content: start;
   height: auto;
   border-bottom: 1px solid black;
 }
@@ -261,10 +257,12 @@ h2 {
 
 .problem-list {
   display: none;
+  margin-bottom: 20px;
 }
 
 .solution-list {
   display: none;
+  margin-bottom: 20px;
 }
 
 .user-explain {
@@ -395,5 +393,25 @@ h2 {
   transition-duration: 0.4s;
   border-radius: 10px;
   font-size: 20px;
+  display: none;
+}
+
+.box6,
+.box7 {
+  margin-bottom: 20px;
+}
+
+.what {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 778px;
+  height: 108px;
+}
+
+.what-container {
+  display: none;
+}
+
+.what-content {
   display: none;
 }
