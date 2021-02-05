@@ -43,7 +43,7 @@ const SOLUTIONLIST2 = document.querySelector(".js-solution-list");
 const WHATBTN = document.querySelector(".what-btn");
 const WHATCONTENT = document.querySelector(".what-content");
 const WHATCONTAINER = document.querySelector(".what-container");
-
+const WHATBTN2 = document.querySelector(".what-content-btn");
 
 
 
@@ -69,13 +69,30 @@ let PROBLEM_LIST_ARRAY = [];
 const SOLUTION_LS = "SOLUTIONS";
 let SOLUTION_LIST_ARRAY = [];
 
+var whatCheck = true;
 
+
+function showWhatContent(){
+  WHATCONTAINER.style.display= "block";
+  WHATBTN2.style.display="none";
+}
 
 function showWhat(){
 
+  if(whatCheck === true){
   WHATCONTENT.style.display="block";
+  whatCheck =false;
+  console.log(whatCheck);
+  WHATBTN.innerHTML = "close";
+  WHATBTN2.style.display= "block";
+  WHATBTN2.addEventListener("click", showWhatContent);
 
 
+  }else if (whatCheck === false){
+    WHATCONTENT.style.display="none";
+    whatCheck=true;
+    WHATBTN.innerHTML = "open";
+  }
 }
 
 
