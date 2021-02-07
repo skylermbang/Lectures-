@@ -186,29 +186,123 @@
                 name="story"
                 rows="5"
                 cols="33"
-                placeholder=" List the Solutions (press enter to make the solution list)"
+                placeholder=" Please do your brainstorming and write down the problems"
               >
               </textarea>
               <div>
-                <button onclick="saveWhat()">Submmit</button>
+                <button onclick="saveWhat()">Submit</button>
               </div>
               <div class="adit1">
                 <h2>Most important problem</h2>
                 <p id="demo"></p>
               </div>
-            </div>
+            
           </div>
           <div class="box6">
-            Why do you think this is the most important problem ?
-            <div>
-              <button>Open</button>
-            </div>
-          </div>
+          
+               Why do you think this problem should be prioritized?
+
+               <div>
+                 <button class="why-btn">Open</button>
+                 <div class="why-content">
+                   <p>What is the problem that needs urgent addressing?</p>
+                   <li>
+                     Justify to us why this problem is prioritized.
+
+                   </li>
+                   <li>
+                     Why do you believe this is significant and has long term effects?
+
+                   </li>
+                   <li>
+                     Why do you believe in it?
+
+                   </li>
+                 </div>
+                 <button class="why-content-btn">Wrtie your idea</button>
+     
+                 <div class="why-container">
+                   <div id="stopwatch">
+                     <!-- CURRENT TIME -->
+                     <div id="sw-time2">00:00:00</div>
+     
+                     <!-- CONTROLS -->
+                     <input type="button" value="Reset" id="sw-rst2" disabled />
+                     <input type="button" value="Start" id="sw-go2" disabled />
+                   </div>
+     
+                   <textarea
+                     class="why"
+                     id="why"
+                     name="story"
+                     rows="5"
+                     cols="33"
+                     placeholder=" Please do your brainstorming and wrtie 'WHY?' "
+                   >
+                   </textarea>
+                   <div>
+                     <button onclick="saveWhy()">Submit</button>
+                   </div>
+                   <div class="adit2">
+                     <h2> This problem should be prioritized because ...
+                     </h2>
+                     <p id="demo2"></p>
+                   </div>
+                 
+               </div>
+          
           <div class="box7">
-            How are you going to solve the problem ?
+            How do you plan to solve the problems you have narrowed down? What steps will you take?
             <div>
-              <button>Open</button>
-            </div>
+               <button class="how-btn">Open</button>
+               <div class="how-content">
+                 
+
+                 <li>
+                  Write down how you will approach this problem (bullet points)
+
+
+                 </li>
+                 <li>
+                  Will you pursuit a tangible, digital, or service-based solution? 
+
+                 </li>
+                 <li>
+                  A combination of tangible, digital, or service-based?
+
+
+                 </li>
+               </div>
+               <button class="how-content-btn">Wrtie your idea</button>
+   
+               <div class="how-container">
+                 <div id="stopwatch">
+                   <!-- CURRENT TIME -->
+                   <div id="sw-time3">00:00:00</div>
+   
+                   <!-- CONTROLS -->
+                   <input type="button" value="Reset" id="sw-rst3" disabled />
+                   <input type="button" value="Start" id="sw-go3" disabled />
+                 </div>
+   
+                 <textarea
+                   class="how"
+                   id="how"
+                   name="story"
+                   rows="5"
+                   cols="33"
+                   placeholder=" Please do your brainstorming and wrtie 'HOW?' "
+                 >
+                 </textarea>
+                 <div>
+                   <button onclick="saveHow()">Submit</button>
+                 </div>
+                 <div class="adit3">
+                   <h2> The plan is  ...
+                   </h2>
+                   <p id="demo3"></p>
+                 </div>
+               
           </div>
         </div>
         <div class="row6">

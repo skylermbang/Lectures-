@@ -47,6 +47,23 @@ const WHATBTN2 = document.querySelector(".what-content-btn");
 
 
 
+const WHYBTN = document.querySelector(".why-btn");
+const WHYCONTENT = document.querySelector(".why-content");
+const WHYCONTAINER = document.querySelector(".why-container");
+const WHYBTN2 = document.querySelector(".why-content-btn");
+
+
+
+
+
+const HOWBTN = document.querySelector(".how-btn");
+const HOWCONTENT = document.querySelector(".how-content");
+const HOWCONTAINER = document.querySelector(".how-container");
+const HOWBTN2 = document.querySelector(".how-content-btn");
+
+
+
+
 var imgCheck1 = true;
 var imgCheck2 = true;
 
@@ -70,6 +87,33 @@ const SOLUTION_LS = "SOLUTIONS";
 let SOLUTION_LIST_ARRAY = [];
 
 var whatCheck = true;
+var whyCheck = true;
+var howCheck = true;
+
+
+
+function showHowContent(){
+  HOWCONTAINER.style.display= "block";
+  HOWTBTN2.style.display="none";
+}
+
+function showHow(){
+
+  if(howCheck === true){
+  HOWCONTENT.style.display="block";
+  howheck =false;
+  console.log(howCheck);
+  HOWBTN.innerHTML = "close";
+  HOWBTN2.style.display= "block";
+  HOWBTN2.addEventListener("click", showHowContent);
+
+
+  }else if (howCheck === false){
+    HOWCONTENT.style.display="none";
+    HowCheck=true;
+    HOWBTN.innerHTML = "open";
+  }
+}
 
 
 function showWhatContent(){
@@ -92,6 +136,35 @@ function showWhat(){
     WHATCONTENT.style.display="none";
     whatCheck=true;
     WHATBTN.innerHTML = "open";
+  }
+}
+
+
+function showWhatContent(){
+  WHATCONTAINER.style.display= "block";
+  WHATBTN2.style.display="none";
+}
+
+function showWhyContent(){
+  WHYCONTAINER.style.display= "block";
+  WHYBTN2.style.display="none";
+}
+
+function showWhy(){
+
+  if(whyCheck === true){
+  WHYCONTENT.style.display="block";
+  whyCheck =false;
+  console.log(whyCheck);
+  WHYBTN.innerHTML = "close";
+  WHYBTN2.style.display= "block";
+  WHYBTN2.addEventListener("click", showWhyContent);
+
+
+  }else if (whyCheck === false){
+    WHYCONTENT.style.display="none";
+    whyCheck=true;
+    WHYBTN.innerHTML = "open";
   }
 }
 
@@ -391,6 +464,19 @@ function saveWhat() {
 
 
 
+function saveWhy() {
+  var y = document.getElementById("why").value;
+  document.getElementById("demo2").innerHTML = y;
+}
+
+
+
+function saveHow() {
+  var z = document.getElementById("how").value;
+  document.getElementById("demo3").innerHTML = z;
+}
+
+
 
 function init(){
 
@@ -416,7 +502,8 @@ function init(){
   loadSolution();
 
   WHATBTN.addEventListener("click", showWhat);
-
+  WHYBTN.addEventListener("click", showWhy);
+  HOWBTN.addEventListener("click", showHow);
 }
 
 

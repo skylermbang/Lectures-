@@ -401,6 +401,7 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* what part */
 .what {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -423,6 +424,63 @@ h2 {
 }
 
 .adit1 {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* why part */
+
+.why {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 778px;
+  height: 108px;
+}
+
+.why-container {
+  display: none;
+}
+
+.why-content {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.why-content-btn {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.adit2 {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/*  how part */
+.how {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 778px;
+  height: 108px;
+}
+
+.how-container {
+  display: none;
+}
+
+.how-content {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.how-content-btn {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.adit3 {
   margin-top: 20px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
