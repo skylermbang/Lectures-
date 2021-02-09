@@ -1,21 +1,33 @@
 const USERCARD =document.querySelector(".user-card-js");
 const USERCARDBTN =document.querySelector(".user-card-button-js");
 const USERCARDBTN2 =document.querySelector(".user-card-button-js2");
+const USERCARDBTN3 =document.querySelector(".user-card-button-js3");
 const USEREXPLAIN = document.querySelector(".user-explain");
+const USEREXPLAIN2 = document.querySelector(".user-explain2");
 
 const FEATURECARD =document.querySelector(".feature-card-js");
 const FEATURECARDBTN =document.querySelector(".feature-card-button-js");
 const FEATURECARDBTN2 =document.querySelector(".feature-card-button-js2");
+const FEATURECARDBTN3 =document.querySelector(".feature-card-button-js3");
 const FEATUREEXPLAIN = document.querySelector(".feature-explain");
+const FEATUREEXPLAIN2 = document.querySelector(".feature-explain2");
+
 const FEATURE2CARD =document.querySelector(".feature2-card-js");
 const FEATURE2CARDBTN =document.querySelector(".feature2-card-button-js");
 const FEATURE2CARDBTN2 =document.querySelector(".feature2-card-button-js2");
+const FEATURE2CARDBTN3 =document.querySelector(".feature2-card-button-js3");
 const FEATURE2EXPLAIN = document.querySelector(".feature2-explain");
+const FEATURE2EXPLAIN2 = document.querySelector(".feature2-explain2");
 
 const BOOSTERCARD =document.querySelector(".booster-card-js");
 const BOOSTERCARDBTN =document.querySelector(".booster-card-button-js");
 const BOOSTERCARDBTN2 =document.querySelector(".booster-card-button-js2");
+const BOOSTERCARDBTN3 =document.querySelector(".booster-card-button-js3");
 const BOOSTEREXPLAIN = document.querySelector(".booster-explain");
+const BOOSTEREXPLAIN2 = document.querySelector(".booster-explain2");
+
+
+
 
 const PROBLEMLISTBTN = document.querySelector(".problem-list-btn");
 const PROBLEMLIST = document.querySelector(".problem-list");
@@ -315,27 +327,112 @@ function handleSubmit2(){
 
 
 
+function genRandom1(){
+  const USER_CARD_NUMBER = 9 ;
+  const number1 = Math.floor(Math.random() * USER_CARD_NUMBER );
+  return number1;
+ 
+}
+
+
+function genRandom2(){
+  const FEATURE1_CARD_NUMBER = 4 ;
+  const number2 = Math.floor(Math.random() * FEATURE_CARD_NUMBER );
+  return number2;
+ 
+}
+
+
+function genRandom3(){
+  const FEATURE2_CARD_NUMBER = 4 ;
+  const number3 = Math.floor(Math.random() * FEATURE2_CARD_NUMBER );
+  return number3;
+ 
+}
+
+
+function genRandom4(){
+  const BOOSTER_CARD_NUMBER = 9 ;
+  const number4 = Math.floor(Math.random() * BOOSTER_CARD_NUMBER );
+  return number4;
+ 
+}
 
 
 
 
+
+
+
+var number1 = "";
+var number2 = "";
+var number3 = "";
+var number4 = "";
 
 
 
 function openCard2() {
 
-
+  const randomeNumber1 = genRandom1();
+  //const randomeNumber1 = 1;
   if( imgCheck2 === true ){
   USERCARD.style.display="block";
-  USERCARD.src="/gym_gores.jpeg";
+  USERCARD.src=`/user${randomeNumber1}.jpeg`;
   imgCheck2 =false;
   USERCARD.style.marginLeft = "80px";
 
   USERCARDBTN2.innerHTML="YOUR CARD IS : ";
+  USERCARDBTN3.style.display="block";
+  USERCARDBTN3.addEventListener("click", openCardExplain);
+  number1 = randomeNumber1;
+  console.log(number1);
 
+
+
+  
   };
 
+  function openCardExplain(randomeNumber1){
+    USEREXPLAIN2.style.display="block";
+    console.log(number1);
+    var user0_explain = " local community";
+    var user1_explain = "Many come from far away to make it , here and then there are true native, here for a lifetime, This concenturation& mix makes the big city great!";
+    var user2_explain = " freelancer";
+    var user3_explain = " college students";
+    var user4_explain = " families";
+    var user5_explain = " married couple";
+    var user6_explain = " mass market";
+    var user7_explain = " children";
+    var user8_explain = " start ups";
+    var user9_explain = " senior citizens";
+    
+
+    if(number1 === 0){
+
+      USEREXPLAIN2.innerHTML= user0_explain;
+    }else if (number1 === 1){
+      USEREXPLAIN2.innerHTML= user1_explain;
+    }else if (number1 === 2){
+      USEREXPLAIN2.innerHTML= user2_explain;
+    }else if (number1 === 3){
+      USEREXPLAIN2.innerHTML= user3_explain;
+    }else if (number1 === 4){
+      USEREXPLAIN2.innerHTML= user4_explain;
+    }else if (number1 === 5){
+      USEREXPLAIN2.innerHTML= user5_explain;
+    }else if (number1 === 6){
+      USEREXPLAIN2.innerHTML= user6_explain;
+    }else if (number1 === 7){
+      USEREXPLAIN2.innerHTML= user7_explain;
+    }else if (number1 === 8){
+      USEREXPLAIN2.innerHTML= user8_explain;
+    }else if (number1 === 9){
+      USEREXPLAIN2.innerHTML= user9_explain;
+    }
+  }
 }
+
+
 
 function openCard1(){
 
@@ -413,17 +510,67 @@ function openCard5(){
   }
 }
 
-
+/* Booster Card  */
 function openCard8() {
   if( imgCheck8 === true ){
-  console.log("testing");
+
+  const randomeNumber4 = genRandom4();
+
   BOOSTERCARD.style.display="block";
-  BOOSTERCARD.src="/technology.jpeg";
+  BOOSTERCARD.src=`/booster${randomeNumber4}.png`;
   imgCheck8 =false;
   BOOSTERCARD.style.marginLeft = "80px";
   BOOSTERCARDBTN.innerHTML="YOUR CARD IS :";
+
+  BOOSTERCARDBTN3.style.display="block";
+  BOOSTERCARDBTN3.addEventListener("click", openCardExplain4);
+  number4 = randomeNumber4;
+  console.log(number4);
   }  
 }
+
+
+function openCardExplain4(randomeNumber4){
+ 
+  console.log(number4);
+
+  var booster0_explain = " Mentorship";
+  var booster1_explain = "Efficiency";
+  var booster2_explain = " Headlines";
+  var booster3_explain = " Piggyback";
+  var booster4_explain = " Cheap labor";
+  var booster5_explain = " good will";
+  var booster6_explain = " speed";
+  var booster7_explain = " passionate team";
+  var booster8_explain = " exclusive IP";
+  var booster9_explain = " consistency";
+  
+
+  if(number4 === 0){
+
+    BOOSTEREXPLAIN2.innerHTML= booster0_explain;
+  }else if (number4 === 1){
+    BOOSTEREXPLAIN2.innerHTML= booster1_explain;
+  }else if (number4 === 2){
+    BOOSTEREXPLAIN2.innerHTML= booster2_explain;
+  }else if (number4 === 3){
+    BOOSTEREXPLAIN2.innerHTML= booster3_explain;
+  }else if (number4 === 4){
+    BOOSTEREXPLAIN2.innerHTML= booster4_explain;
+  }else if (number4 === 5){
+    BOOSTEREXPLAIN2.innerHTML= booster5_explain;
+  }else if (number4 === 6){
+    BOOSTEREXPLAIN2.innerHTML= booster6_explain;
+  }else if (number4 === 7){
+    BOOSTEREXPLAIN2.innerHTML= booster7_explain;
+  }else if (number4 === 8){
+    BOOSTEREXPLAIN2.innerHTML= booster8_explain;
+  }else if (number4 === 9){
+    UBOOSTEREXPLAIN2.innerHTML= booster9_explain;
+  }
+  BOOSTEREXPLAIN2.style.display="block";
+}
+
 
 function openCard7(){
   if(imgCheck7 === true){
@@ -482,6 +629,7 @@ function init(){
 
   USERCARDBTN.addEventListener("click" , openCard1);
   USERCARDBTN2.addEventListener("click", openCard2);
+
   FEATURECARDBTN.addEventListener("click" , openCard3);
   FEATURECARDBTN2.addEventListener("click", openCard4);
   FEATURE2CARDBTN.addEventListener("click" , openCard5);

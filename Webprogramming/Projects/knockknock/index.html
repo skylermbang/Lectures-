@@ -11,14 +11,12 @@
       <ul>
         <img class="logo-img" src="/logo.png" />
       </ul>
+   
       <ul>
         <li>KnocKnock</li>
         <li>Unlocking the business inside you</li>
       </ul>
-      <ul>
-        <li>Testing Phase2</li>
-        <li>Blahblah</li>
-      </ul>
+
     </header>
     <div class="bad">
       <iframe
@@ -27,18 +25,18 @@
         src="https://www.youtube.com/embed/tgbNymZ7vqY"
       >
       </iframe>
-      <h2>KnockKonck</h2>
+      <h2>KnocKnock</h2>
     </div>
     <div class="bad-next"></div>
     <div class="religion">
-      <h2>Instruction of Game</h2>
+      <h2> Instruction </h2>
       <div>
         <span> Very briefly </span>
         <span>bullet points</span>
       </div>
     </div>
     <div class="graph-container">
-      <h2 class="title">Instruction</h2>
+      <h2 class="title">Brainstorming Game</h2>
       <div class="graph-content-container">
         <div class="row0">4 CARDS</div>
         <div class="row1">
@@ -52,6 +50,10 @@
             </p>
             <button class="user-card-button-js2">GET MY CARD</button>
             <img class="user-img user-card-js" src="/user.jpeg" />
+            <button class="user-card-button-js3"> EXPLAIN</button>
+            <p class="user-explain2 user-explain2-js">
+               User card explanation 
+            </p>
           </div>
 
           <div class="box2">
@@ -64,6 +66,10 @@
             </p>
             <button class="feature-card-button-js2">GET MY CARD</button>
             <img class="feature-img feature-card-js" src="/feature.jpeg" />
+            <button class="feature-card-button-js3">EXPLAIN</button>
+            <p class="feature-explain2 feature-explain2-js">
+              Feature card 1 explanation
+            </p>
           </div>
 
           <div class="box3">
@@ -76,6 +82,10 @@
             </p>
             <button class="feature2-card-button-js2">GET MY CARD</button>
             <img class="feature2-img feature2-card-js" src="/feature.jpeg" />
+            <button class="feature2-card-button-js3">EXPLAIN</button>
+            <p class="feature2-explain2 feature2-explain2-js">
+              Feature card 2 explanation
+            </p>
           </div>
 
           <div class="box4">
@@ -88,235 +98,246 @@
             </p>
             <button class="booster-card-button-js2">GET MY CARD</button>
             <img class="booster-img booster-card-js" src="/booster.jpeg" />
+            <button class="booster-card-button-js3">EXPLAIN</button>
+            <p class="booster-explain2 booster-explain2-js">
+              Booster card 1 explanation
+            </p>
           </div>
         </div>
       </div>
-
-      <div class="row4">
-        <div class="box5">
-          <h3>
-            Problems: Write down as many problems as you can with regards to
-            your assigned user (target market)
-          </h3>
-          List the Possible Problems
-          <div>
-            <button class="problem-list-btn">Open</button>
-          </div>
-          <ul class="problem-list">
-            <li>Most significant and urgent problem your user faces</li>
-            <li>Least significant and urgent problem your user faces</li>
-            <li>Long term problems your user faces</li>
-            <li>Short term problems your user faces</li>
-          </ul>
-
-          <form action="" class="js-problem-form form">
-            <input
-              type="text"
-              placeholder=" List the problems (press enter to make the problem list)"
-              rows="10"
-              cols="10"
-              size="70"
-            />
-          </form>
-          <ul class="js-problem-list"></ul>
-        </div>
-        <div class="box6">
-          Problem Leads to Solutions
-          <div>⬇️ ⬇️ ⬇️ ⬇️</div>
-        </div>
-        <div class="box7">
-          Write down as many solutions as you can with regards to your assigned
-          user (target market)
-
-          <div>
-            <button class="solution-list-btn">Open</button>
-          </div>
-          <ul class="solution-list">
-            <li>Most significant and urgent solutions for user</li>
-            <li>Least significant and urgent solution for user</li>
-            <li>Long term solutions for user</li>
-            <li>Short term solutions for user</li>
-          </ul>
-          <form action="" class="js-solution-form form2">
-            <input
-              type="text"
-              placeholder=" List the Solutions (press enter to make the solution list)"
-              rows="10"
-              cols="10"
-              size="70"
-            />
-          </form>
-          <ul class="js-solution-list"></ul>
-        </div>
-      </div>
-      <div class="row5">
-        <div class="box5">
-          What is the most important problem ?
-          <div>
-            <button class="what-btn">Open</button>
-            <div class="what-content">
-              <p>What is the problem that needs urgent addressing?</p>
-              <li>
-                Narrow down to the most significant and urgent problem (you
-                could combine 1 or more problems if it is related)
-              </li>
-              <li>
-                Look at the big picture so try to focus on long term problems
-              </li>
-              <li>
-                You can also use stopwatch to time your brainstorming time. we
-                recommand 5 min
-              </li>
+      
+     <div class="game-content">
+        <div class="row4">
+          <div class="box5">
+            <h3>
+              Problems: Write down as many problems as you can with regards to
+              your assigned user (target market)
+            </h3>
+            List the Possible Problems
+            <div>
+              <button class="problem-list-btn">Open</button>
             </div>
-            <button class="what-content-btn">Wrtie your idea</button>
+            <ul class="problem-list">
+              <li>Most significant and urgent problem your user faces</li>
+              <li>Least significant and urgent problem your user faces</li>
+              <li>Long term problems your user faces</li>
+              <li>Short term problems your user faces</li>
+            </ul>
 
-            <div class="what-container">
-              <div id="stopwatch">
-                <!-- CURRENT TIME -->
-                <div id="sw-time">00:00:00</div>
-
-                <!-- CONTROLS -->
-                <input type="button" value="Reset" id="sw-rst" disabled />
-                <input type="button" value="Start" id="sw-go" disabled />
-              </div>
-
-              <textarea
-                class="what"
-                id="what"
-                name="story"
-                rows="5"
-                cols="33"
-                placeholder=" Please do your brainstorming and write down the problems"
-              >
-              </textarea>
-              <div>
-                <button onclick="saveWhat()">Submit</button>
-              </div>
-              <div class="adit1">
-                <h2>Most important problem</h2>
-                <p id="demo"></p>
-              </div>
-            
+            <form action="" class="js-problem-form form">
+              <input
+                type="text"
+                placeholder=" List the problems (press enter to make the problem list)"
+                rows="10"
+                cols="10"
+                size="70"
+              />
+            </form>
+            <ul class="js-problem-list"></ul>
           </div>
           <div class="box6">
-          
-               Why do you think this problem should be prioritized?
-
-               <div>
-                 <button class="why-btn">Open</button>
-                 <div class="why-content">
-                   <p>What is the problem that needs urgent addressing?</p>
-                   <li>
-                     Justify to us why this problem is prioritized.
-
-                   </li>
-                   <li>
-                     Why do you believe this is significant and has long term effects?
-
-                   </li>
-                   <li>
-                     Why do you believe in it?
-
-                   </li>
-                 </div>
-                 <button class="why-content-btn">Wrtie your idea</button>
-     
-                 <div class="why-container">
-                   <div id="stopwatch">
-                     <!-- CURRENT TIME -->
-                     <div id="sw-time2">00:00:00</div>
-     
-                     <!-- CONTROLS -->
-                     <input type="button" value="Reset" id="sw-rst2" disabled />
-                     <input type="button" value="Start" id="sw-go2" disabled />
-                   </div>
-     
-                   <textarea
-                     class="why"
-                     id="why"
-                     name="story"
-                     rows="5"
-                     cols="33"
-                     placeholder=" Please do your brainstorming and wrtie 'WHY?' "
-                   >
-                   </textarea>
-                   <div>
-                     <button onclick="saveWhy()">Submit</button>
-                   </div>
-                   <div class="adit2">
-                     <h2> This problem should be prioritized because ...
-                     </h2>
-                     <p id="demo2"></p>
-                   </div>
-                 
-               </div>
-          
+            Problem Leads to Solutions
+            <div>⬇️ ⬇️ ⬇️ ⬇️</div>
+          </div>
           <div class="box7">
-            How do you plan to solve the problems you have narrowed down? What steps will you take?
+            Write down as many solutions as you can with regards to your assigned
+            user (target market)
+
             <div>
-               <button class="how-btn">Open</button>
-               <div class="how-content">
-                 
-
-                 <li>
-                  Write down how you will approach this problem (bullet points)
-
-
-                 </li>
-                 <li>
-                  Will you pursuit a tangible, digital, or service-based solution? 
-
-                 </li>
-                 <li>
-                  A combination of tangible, digital, or service-based?
-
-
-                 </li>
-               </div>
-               <button class="how-content-btn">Wrtie your idea</button>
-   
-               <div class="how-container">
-                 <div id="stopwatch">
-                   <!-- CURRENT TIME -->
-                   <div id="sw-time3">00:00:00</div>
-   
-                   <!-- CONTROLS -->
-                   <input type="button" value="Reset" id="sw-rst3" disabled />
-                   <input type="button" value="Start" id="sw-go3" disabled />
-                 </div>
-   
-                 <textarea
-                   class="how"
-                   id="how"
-                   name="story"
-                   rows="5"
-                   cols="33"
-                   placeholder=" Please do your brainstorming and wrtie 'HOW?' "
-                 >
-                 </textarea>
-                 <div>
-                   <button onclick="saveHow()">Submit</button>
-                 </div>
-                 <div class="adit3">
-                   <h2> The plan is  ...
-                   </h2>
-                   <p id="demo3"></p>
-                 </div>
-               
+              <button class="solution-list-btn">Open</button>
+            </div>
+            <ul class="solution-list">
+              <li>Most significant and urgent solutions for user</li>
+              <li>Least significant and urgent solution for user</li>
+              <li>Long term solutions for user</li>
+              <li>Short term solutions for user</li>
+            </ul>
+            <form action="" class="js-solution-form form2">
+              <input
+                type="text"
+                placeholder=" List the Solutions (press enter to make the solution list)"
+                rows="10"
+                cols="10"
+                size="70"
+              />
+            </form>
+            <ul class="js-solution-list"></ul>
           </div>
         </div>
-        <div class="row6">
-          <div>
-            <h1>Your choice for commnunicating your solutoin</h1>
+        <div class="row5">
+          <div class="box5">
+            What is the most important problem ?
+            <div>
+              <button class="what-btn">Open</button>
+              <div class="what-content">
+                <p>What is the problem that needs urgent addressing?</p>
+                <li>
+                  Narrow down to the most significant and urgent problem (you
+                  could combine 1 or more problems if it is related)
+                </li>
+                <li>
+                  Look at the big picture so try to focus on long term problems
+                </li>
+                <li>
+                  You can also use stopwatch to time your brainstorming time. we
+                  recommand 5 min
+                </li>
+              </div>
+              <button class="what-content-btn">Wrtie your idea</button>
+
+              <div class="what-container">
+                <div id="stopwatch">
+                  <!-- CURRENT TIME -->
+                  <div id="sw-time">00:00:00</div>
+
+                  <!-- CONTROLS -->
+                  <input type="button" value="Reset" id="sw-rst" disabled />
+                  <input type="button" value="Start" id="sw-go" disabled />
+                </div>
+
+                <textarea
+                  class="what"
+                  id="what"
+                  name="story"
+                  rows="5"
+                  cols="33"
+                  placeholder=" Please do your brainstorming and write down the problems"
+                >
+                </textarea>
+                <div>
+                  <button onclick="saveWhat()">Submit</button>
+                </div>
+                <div class="adit1">
+                  <h2>Most important problem</h2>
+                  <p id="demo"></p>
+                </div>
+              
+            </div>
+            <div class="box6">
+            
+                Why do you think this problem should be prioritized?
+
+                <div>
+                  <button class="why-btn">Open</button>
+                  <div class="why-content">
+                    <p>What is the problem that needs urgent addressing?</p>
+                    <li>
+                      Justify to us why this problem is prioritized.
+
+                    </li>
+                    <li>
+                      Why do you believe this is significant and has long term effects?
+
+                    </li>
+                    <li>
+                      Why do you believe in it?
+
+                    </li>
+                  </div>
+                  <button class="why-content-btn">Wrtie your idea</button>
+      
+                  <div class="why-container">
+                    <div id="stopwatch">
+                      <!-- CURRENT TIME -->
+                      <div id="sw-time2">00:00:00</div>
+      
+                      <!-- CONTROLS -->
+                      <input type="button" value="Reset" id="sw-rst2" disabled />
+                      <input type="button" value="Start" id="sw-go2" disabled />
+                    </div>
+      
+                    <textarea
+                      class="why"
+                      id="why"
+                      name="story"
+                      rows="5"
+                      cols="33"
+                      placeholder=" Please do your brainstorming and wrtie 'WHY?' "
+                    >
+                    </textarea>
+                    <div>
+                      <button onclick="saveWhy()">Submit</button>
+                    </div>
+                    <div class="adit2">
+                      <h2> This problem should be prioritized because ...
+                      </h2>
+                      <p id="demo2"></p>
+                    </div>
+                  
+                </div>
+            
+            <div class="box7">
+              How do you plan to solve the problems you have narrowed down? 
+              <div>
+                <button class="how-btn">Open</button>
+                <div class="how-content">
+                  
+                  What steps will you take?
+                  <li>
+                    Write down how you will approach this problem (bullet points)
+
+
+                  </li>
+                  <li>
+                    Will you pursuit a tangible, digital, or service-based solution? 
+
+                  </li>
+                  <li>
+                    A combination of tangible, digital, or service-based?
+
+
+                  </li>
+                </div>
+                <button class="how-content-btn">Wrtie your idea</button>
+    
+                <div class="how-container">
+                  <div id="stopwatch">
+                    <!-- CURRENT TIME -->
+                    <div id="sw-time3">00:00:00</div>
+    
+                    <!-- CONTROLS -->
+                    <input type="button" value="Reset" id="sw-rst3" disabled />
+                    <input type="button" value="Start" id="sw-go3" disabled />
+                  </div>
+    
+                  <textarea
+                    class="how"
+                    id="how"
+                    name="story"
+                    rows="5"
+                    cols="33"
+                    placeholder=" Please do your brainstorming and wrtie 'HOW?' "
+                  >
+                  </textarea>
+                  <div>
+                    <button onclick="saveHow()">Submit</button>
+                  </div>
+                  <div class="adit3">
+                    <h2> The plan is  ...
+                    </h2>
+                    <p id="demo3"></p>
+                  </div>
+                
+            </div>
           </div>
-          <button class="button button1">Tangible</button>
-          <button class="button button2">Digital</button>
-          <button class="button button3">Service</button>
+          <div class="row6">
+            <div>
+              <h1>Your choice for commnunicating your solutoin</h1>
+            </div>
+            <button class="button button1">a</button>
+            <button class="button button2">b</button>
+            <button class="button button3">c</button>
+          </div>
+       
         </div>
-        <div class="row9"></div>
+        <div class="footer">
+          <p>
+            Copyright @ Knocknock by Let's make great 2021 
+          </p>
+
+        </div>
       </div>
     </div>
-
     <script src="script.js"></script>
     <script src="stopwatch.js"></script>
   </body>
