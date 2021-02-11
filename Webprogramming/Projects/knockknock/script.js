@@ -337,7 +337,7 @@ function genRandom1(){
 
 function genRandom2(){
   const FEATURE1_CARD_NUMBER = 4 ;
-  const number2 = Math.floor(Math.random() * FEATURE_CARD_NUMBER );
+  const number2 = Math.floor(Math.random() * FEATURE1_CARD_NUMBER );
   return number2;
  
 }
@@ -369,13 +369,13 @@ var number2 = "";
 var number3 = "";
 var number4 = "";
 
-
+/* user card  */
 
 function openCard2() {
 
   const randomeNumber1 = genRandom1();
-  //const randomeNumber1 = 1;
   if( imgCheck2 === true ){
+ 
   USERCARD.style.display="block";
   USERCARD.src=`/user${randomeNumber1}.jpeg`;
   imgCheck2 =false;
@@ -452,20 +452,51 @@ function openCard1(){
 }
 
 
+/*  feature 1 card */
 function openCard4() {
 
 
 
   if( imgCheck4 === true ){
+    const randomeNumber2 = genRandom2();
   console.log("testing");
   FEATURECARD.style.display="block";
-  FEATURECARD.src="/technology.jpeg";
+  FEATURECARD.src=`/featurea${randomeNumber2}.png`;
   imgCheck4 =false;
   FEATURECARD.style.marginLeft = "80px";
   FEATURECARDBTN2.innerHTML="YOUR CARD IS : ";
+  FEATURECARDBTN3.style.display="block";
+
+  FEATURECARDBTN3.addEventListener("click", openCardExplain2);
+  number2= randomeNumber2;
+  console.log(number2);
+
 
   };
 
+  function openCardExplain2(randomeNumber2){
+    FEATUREEXPLAIN2.style.display="block";
+    console.log(number2);
+    var featurea0_explain = " Internet Of Things";
+    var featurea1_explain = "Apps";
+    var featurea2_explain = "Advising";
+    var featurea3_explain = "Virtual Reality ";
+    var featurea4_explain = " Training";
+
+
+    if(number2 === 0){
+      FEATUREEXPLAIN2.innerHTML= featurea0_explain;
+    }else if (number2 === 1){
+      FEATUREEXPLAIN2.innerHTML= featurea1_explain;
+    }else if (number2 === 2){
+      FEATUREEXPLAIN2.innerHTML= featurea2_explain;
+    }else if (number2 === 3){
+      FEATUREEXPLAIN2.innerHTML= featurea3_explain;
+    }else if (number2 === 4){
+      FEATUREEXPLAIN2.innerHTML= featurea4_explain;
+  
+   }
+  }
 }
 
 function openCard3(){
@@ -483,18 +514,47 @@ function openCard3(){
 
 function openCard6() {
 
-
+/* feature 2 card */
 
   if( imgCheck6 === true ){
-  console.log("testing");
+    const randomeNumber3 = genRandom3();
+
   FEATURE2CARD.style.display="block";
-  FEATURE2CARD.src="/technology.jpeg";
+  FEATURE2CARD.src=`/featureb${randomeNumber3}.png`;
+
   imgCheck6 =false;
   FEATURE2CARD.style.marginLeft = "80px";
   FEATURE2CARDBTN.innerHTML="YOUR CARD IS : ";
-
+  FEATURE2CARDBTN3.style.display="block";
+  FEATURE2CARDBTN3.addEventListener("click", openCardExplain3);
+  number3 = randomeNumber3;
+  console.log(number3);
   };
 
+  function openCardExplain3(randomeNumber3){
+    console.log("whaat?");
+    FEATURE2EXPLAIN2.style.display="block";
+    console.log(number3);
+    var featureb0_explain = " Food & Beverage";
+    var featureb1_explain = "Software As a service";
+    var featureb2_explain = "E-commerce";
+    var featureb3_explain = "Design ";
+    var featureb4_explain = " Research";
+
+
+    if(number3 === 0){
+      FEATURE2EXPLAIN2.innerHTML= featureb0_explain;
+    }else if (number3 === 1){
+      FEATURE2EXPLAIN2.innerHTML= featureb1_explain;
+    }else if (number3 === 2){
+      FEATURE2EXPLAIN2.innerHTML= featureb2_explain;
+    }else if (number3 === 3){
+      FEATURE2EXPLAIN2.innerHTML= featureb3_explain;
+    }else if (number3 === 4){
+      FEATURE2EXPLAIN2.innerHTML= featureb4_explain;
+  
+   }
+  }
 }
 
 function openCard5(){

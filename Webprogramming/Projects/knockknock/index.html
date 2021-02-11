@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>KnockKnock</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -13,8 +15,8 @@
       </ul>
    
       <ul>
-        <li>KnocKnock</li>
-        <li>Unlocking the business inside you</li>
+        <li class="name1">KnocKnock</li>
+        <li class="name2">Unlock the business side of you</li>
       </ul>
 
     </header>
@@ -25,7 +27,7 @@
         src="https://www.youtube.com/embed/tgbNymZ7vqY"
       >
       </iframe>
-      <h2>KnocKnock</h2>
+   
     </div>
     <div class="bad-next"></div>
     <div class="religion">
@@ -41,7 +43,7 @@
         <div class="row0">4 CARDS</div>
         <div class="row1">
           <div class="box1 box1-js">
-            <h1>USER</h1>
+            <h3>USER</h3>
 
             <button class="user-card-button-js">EXPLAIN</button>
             <p class="user-explain user-explain-js">
@@ -57,7 +59,7 @@
           </div>
 
           <div class="box2">
-            FEATURE
+            <h3>FEATURE</h3>
             <button class="feature-card-button-js">EXPLAIN</button>
             <p class="feature-explain feature-explain-js">
               The features are tools that you will use as a catalyst to support
@@ -73,7 +75,7 @@
           </div>
 
           <div class="box3">
-            FEATURE
+            <h3>FEATURE</h3>
             <button class="feature2-card-button-js">EXPLAIN</button>
             <p class="feature2-explain feature2-explain-js">
               The features are tools that you will use as a catalyst to support
@@ -89,7 +91,7 @@
           </div>
 
           <div class="box4">
-            BOOSTER
+            <h3>BOOSTER</h3>
             <button class="booster-card-button-js">EXPLAIN</button>
             <p class="booster-explain booster-explain-js">
               A booster can help you enhance and add more perspectives to your
@@ -113,7 +115,7 @@
               Problems: Write down as many problems as you can with regards to
               your assigned user (target market)
             </h3>
-            List the Possible Problems
+            <h4> List the Possible Problems</h4>
             <div>
               <button class="problem-list-btn">Open</button>
             </div>
@@ -136,12 +138,12 @@
             <ul class="js-problem-list"></ul>
           </div>
           <div class="box6">
-            Problem Leads to Solutions
-            <div>⬇️ ⬇️ ⬇️ ⬇️</div>
+            <h3>Problem Leads to Solutions</h3>
+ 
           </div>
           <div class="box7">
-            Write down as many solutions as you can with regards to your assigned
-            user (target market)
+           <h4> Write down as many solutions as you can with regards to your assigned
+            user (target market)</h4>
 
             <div>
               <button class="solution-list-btn">Open</button>
@@ -166,7 +168,7 @@
         </div>
         <div class="row5">
           <div class="box5">
-            What is the most important problem ?
+            <h3> What is the most important problem ?</h3> 
             <div>
               <button class="what-btn">Open</button>
               <div class="what-content">
@@ -180,10 +182,10 @@
                 </li>
                 <li>
                   You can also use stopwatch to time your brainstorming time. we
-                  recommand 5 min
+                  recommend 5 min
                 </li>
               </div>
-              <button class="what-content-btn">Wrtie your idea</button>
+              <button class="what-content-btn">Write your idea</button>
 
               <div class="what-container">
                 <div id="stopwatch">
@@ -202,6 +204,7 @@
                   rows="5"
                   cols="33"
                   placeholder=" Please do your brainstorming and write down the problems"
+                  style="font-size:25px;"
                 >
                 </textarea>
                 <div>
@@ -209,13 +212,13 @@
                 </div>
                 <div class="adit1">
                   <h2>Most important problem</h2>
-                  <p id="demo"></p>
+                  <p id="demo" class="demo"></p>
                 </div>
               
             </div>
             <div class="box6">
-            
-                Why do you think this problem should be prioritized?
+                <h3> Why do you think this problem should be prioritized? </h3>
+
 
                 <div>
                   <button class="why-btn">Open</button>
@@ -234,7 +237,7 @@
 
                     </li>
                   </div>
-                  <button class="why-content-btn">Wrtie your idea</button>
+                  <button class="why-content-btn">Write your idea</button>
       
                   <div class="why-container">
                     <div id="stopwatch">
@@ -253,6 +256,7 @@
                       rows="5"
                       cols="33"
                       placeholder=" Please do your brainstorming and wrtie 'WHY?' "
+                      style="font-size:25px;"
                     >
                     </textarea>
                     <div>
@@ -261,13 +265,13 @@
                     <div class="adit2">
                       <h2> This problem should be prioritized because ...
                       </h2>
-                      <p id="demo2"></p>
+                      <p id="demo2" class="demo2"></p>
                     </div>
                   
                 </div>
             
             <div class="box7">
-              How do you plan to solve the problems you have narrowed down? 
+              <h3> How do you plan to solve the problems you have narrowed down? </h3>
               <div>
                 <button class="how-btn">Open</button>
                 <div class="how-content">
@@ -288,7 +292,7 @@
 
                   </li>
                 </div>
-                <button class="how-content-btn">Wrtie your idea</button>
+                <button class="how-content-btn">Write your idea</button>
     
                 <div class="how-container">
                   <div id="stopwatch">
@@ -307,6 +311,9 @@
                     rows="5"
                     cols="33"
                     placeholder=" Please do your brainstorming and wrtie 'HOW?' "
+                    style="font-size:25px;"
+                 
+                    border-radius: 10px;
                   >
                   </textarea>
                   <div>
@@ -315,14 +322,14 @@
                   <div class="adit3">
                     <h2> The plan is  ...
                     </h2>
-                    <p id="demo3"></p>
+                    <p id="demo3" class="demo3"></p>
                   </div>
                 
             </div>
           </div>
           <div class="row6">
             <div>
-              <h1>Your choice for commnunicating your solutoin</h1>
+              <h1>Your choice for commnunicating your solution</h1>
             </div>
             <button class="button button1">a</button>
             <button class="button button2">b</button>
@@ -332,7 +339,7 @@
         </div>
         <div class="footer">
           <p>
-            Copyright @ Knocknock by Let's make great 2021 
+            Copyright Knocknock by Let's make great 2021 
           </p>
 
         </div>
