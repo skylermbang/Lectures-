@@ -49,9 +49,9 @@ header {
 }
 
 .logo-img {
-  margin-top: 100px;
-  height: 80px;
-  width: 100px;
+  margin-top: 120px;
+  height: 100px;
+  width: 120px;
 }
 
 .bad {
@@ -85,6 +85,17 @@ div {
   padding-left: 20px;
 }
 
+.intro {
+  font-size: 25px;
+}
+.intro2 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+.intro3 {
+  margin-top: 10px;
+  font-size: 25px;
+}
 h2 {
   font-size: 50px;
   font-weight: 300;
@@ -95,7 +106,7 @@ h2 {
   display: flex;
   flex-direction: column;
   font-size: 32px;
-  color: #59790f;
+  color: black;
   margin-top: 20px;
 }
 
