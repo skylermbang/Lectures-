@@ -1,7 +1,7 @@
 <!--
 
      Django: Getting Started
-### 1.2 Django: Sratrgin a Django proejct ###
+### 2Django: Sratrgin a Django proejct ###
  Python Basic of HTML Django : Python web framework
 ORM/Admin : powerful tools Template ,URL mapping, Forms , packages
 
@@ -18,6 +18,8 @@ django-admin startproject meeting_planner : start project and create folder "mee
 cd meeting_planner
 python mange.py runserver
 
+
+--------------------------------------------------------------------
 db.sqlite3 : db data base
 
 __init__.py :  empty/ ? 
@@ -27,18 +29,19 @@ settings.py: where is the proejct is define / setting for the project
 urls.py: assignes url
 
 asgi.py , wsgi.py : deployment to the production server 
+manage.py : 
+--------------------------------------------------------------------
+
+### 3 Creating a Simple Web Page  ####    
 
 
-
-
-### 1.3 Creating a Simple Web Page  ####
 create  app ? 
 
 go to the project folder (meeting_planner)
 
 
-you can make an app using :
-python manage.py startapp app_name
+
+python manage.py startapp app_name // you can make an app 
 
 
 
@@ -67,9 +70,88 @@ from website.views import welcome
     
     in the production  make sure you turn off the debug true
 
+Django App : Python packages  
+             1 web may consisted with mulitple apps
+
+### 4 Setting up a Data Model  ####
+
+
+Django model classes  
+
+2core  concepts :      1. models  (python clases) mapped to database table
+                       2. Migrations  (python scripts)  keep db structure in sync with code
+
+
+
+Migration
+
+python manage.py showmigrations ## show the migration needed 
+python manage.py migrate ## migrate the thing and if you go to db.squlite3 its automaticlly updtated 
+
+
+GO to model 
+and write the class 
+
+
+class Meeting(models.Model):
+    title = models.CharField(max_length=200)
+    date = models.DateField()
+after this you can 
+python manage.py makemigrations ## to genearate   meetings/migrations/0001_initial.py file
+python manage.py migrate
+
+
+
+you can also change around in the admin page 
+you need to go to admin.py 
+
+and improt what you need to do .
+
+from .models import Meeting
+admin.site.register(Meeting)
+
+
+
+## to make the super user in admin 
+python.magage.py createsuperuser email/pwd
+
+
+Django Models ;  saving python objects in a database 
+                Models classesare mapped to tables 
+                fields are mapped to clumns
+                SQL is generated -  
+
+
+for more django model fields - google 
+
+
+
+what if you want to add "ROOM " in the model ?
+you add the Class Room in the model 
+
+To make things easy , you delete all the migratoin file + db.sqlite3 for the clean start 
+but this makes you have to create the super user ide again 
+*this is not good idea for the exisiting proejct that has lots data only recommend for the starting the new project 
+
+so after delete you have to migrations 
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+### 5 Combining Model, Views, and Template  #### 
+
+
+Model , Template , View 
+
+Template - creating webpate  / generate HTML
 
 
 
 
-### 1.4 Data Model  ####    
--->
+
+
+
+### 6 Urls and Link Building ####
+### 7 Templates ,Styleing and Statics Contents #### 
+### 8 Addubg Yser interacction With ModelForms #### 
