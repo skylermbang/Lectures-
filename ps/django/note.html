@@ -141,6 +141,7 @@ python manage.py migrate
 
 ### 5 Combining Model, Views, and Template  #### 
 
+1)
 
 Model , Template , View 
 
@@ -148,10 +149,69 @@ Template - creating webpate  / generate HTML
 
 
 
+from django.shortcuts import render   ##from vidw.py  we have to import render 
+
+    dedef welcome(request):
+    return render(request, "website/welcome.html")  ## return the html page!
+now you cna render the html page via rendr from view.py
 
 
+2) taking parameters from the URL 
+
+you need to build the view.py of that certain app  with parameter in URL 
+
+in this case meetings -> tempalte -> meetings -> details.html
+
+from django.shortcuts import render, get_object_or_404
+from .models import Meeting
+
+and the view.py of the meeting will be like this 
 
 
+def detail(request, id):
+    meeting = get_object_or_404(Meeting, pk=id)
+    return render(request, "meetings/details.html", {"meeting": meeting})
+    
+URL mapping with parameter :    
+path('meetings/<int:id>', detail),
+     
 ### 6 Urls and Link Building ####
+
+Link building :   Named URL && for loop in template 
+
+this let print all the meeting from the database by loop 
+ <ul>
+      {% for meeting in meetings%}
+      <li>
+        <a href="{% url 'detail' meeting.id %}"> 
+        <a href="/meetings/{{meeting.id}}">   this is old way
+            {{meeting.title}}
+        </a>
+      </li>  
+      {% endfor%}
+    </ul>
+ path('meetings/<int:id>', detail, name="detail") ## this let the naming the URL 
+
+
+
+ 3 steps :
+ -view
+ -template
+ -url mapping 
+
+ make sure you do step by step + you should know what you are doing. (very important)
+
+
+ 1. if you want to list all the room in the welcome =>  add return value in the views.py from home app
+ 2. change view.py in the meeting app
+ 3. change template of both welcome & room deatil .html
+ 4. url mapping 
+
+
+URL mapping 
+
+
+
+
 ### 7 Templates ,Styleing and Statics Contents #### 
 ### 8 Addubg Yser interacction With ModelForms #### 

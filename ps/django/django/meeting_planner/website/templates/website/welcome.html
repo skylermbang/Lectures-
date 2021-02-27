@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to the Meeting Planner!</h1>
+    <p>
+      This is the demo application for the course
+      <em>Django: Getting Started</em>
+      on <a href="https://www.pluralsight.com"> Pluralsight</a>.
+    </p>
+
+    <h2>Meetings</h2>
+    <ul>
+      <li>
+        <a href=> {{ meeting.title }} </a>
+      </li>
+    </ul>
+    <a href={{x}}> Rooms list</a>
+
+
+    <p>  
+
+      {{message}}
+    </p>
+
+    <p>
+     currently {{num_meetings}}  meetings in the database
+    </p>
+  
+
+    <h2>  Meeting </h2>
+ 
+    <ul>
+      {% for meeting in meetings%}
+      <li>
+        <a href="{% url 'detail' meeting.id %}"> 
+        <!--<a href="/meetings/{{meeting.id}}">   this is old way -->
+          {{meeting.title}}
+        </a>
+      </li>  
+      {% endfor%}
+    </ul>
+
+    <h2> Room list </h2>
+    <ul>
+      {% for room in rooms %}
+      <li>
+        <a href="{% url 'rooms' room.id %}"> 
+          {{room.name}}  potato
+        </a>
+      </li>  
+      {% endfor%}
+    </ul>
+  </body>
+</html>
