@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+{% extends "base.html"%}
+{% load static %}
+
+
+{% block potato%}  Welcome {% endblock%}
+{% block sweetpotato %}
     <h1>Welcome to the Meeting Planner!</h1>
     <p>
       This is the demo application for the course
@@ -23,7 +20,7 @@
     <a href={{x}}> Rooms list</a>
 
 
-    <p>  
+    <p >  
 
       {{message}}
     </p>
@@ -35,7 +32,7 @@
 
     <h2>  Meeting </h2>
  
-    <ul>
+    <ul class="meeting">
       {% for meeting in meetings%}
       <li>
         <a href="{% url 'detail' meeting.id %}"> 
@@ -54,7 +51,11 @@
           {{room.name}}  potato
         </a>
       </li>  
+
+  
       {% endfor%}
     </ul>
-  </body>
-</html>
+    <img src= "{% static 'website/1.png' %}" width = "400px">
+
+
+{% endblock%}

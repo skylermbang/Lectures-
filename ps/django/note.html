@@ -214,4 +214,28 @@ URL mapping
 
 
 ### 7 Templates ,Styleing and Statics Contents #### 
+
+
+ CSS stylesheet
+
+ make static > website # in the folder in the appropriate postiion 
+  and in the html page put this instead of hard coding the href
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/style.css' %}" /> 
+
+    img :
+      <img src= "{% static 'website/1.png' %}" width = "400px">
+
+ tempalte inheritance
+  base.html in right under templates folder
+
+
+ 
+
+
 ### 8 Addubg Yser interacction With ModelForms #### 
+
+Add ModelForm
+Form template
+ModelForm
+View
