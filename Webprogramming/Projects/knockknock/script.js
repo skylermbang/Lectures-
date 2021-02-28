@@ -10,7 +10,7 @@ const FEATURECARDBTN =document.querySelector(".feature-card-button-js");
 const FEATURECARDBTN2 =document.querySelector(".feature-card-button-js2");
 const FEATURECARDBTN3 =document.querySelector(".feature-card-button-js3");
 const FEATUREEXPLAIN = document.querySelector(".feature-explain");
-const FEATUREEXPLAIN2 = document.querySelector(".feature-explain2");
+const FEATUREEXPLAIN2 = document.querySelector(".feature-explain2");  
 
 const FEATURE2CARD =document.querySelector(".feature2-card-js");
 const FEATURE2CARDBTN =document.querySelector(".feature2-card-button-js");
