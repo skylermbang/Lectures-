@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{5D1D7C6F-50BB-4545-8214-D4BFFC36045C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="note.cs">
+    <Files>
+      <File FileName="Program.cs" Line="9" Column="1" />
+      <File FileName="note.cs" Line="50" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Youtube PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/Program.cs" relfile="Program.cs" line="9" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,12 @@
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/bin/Debug/netcoreapp3.1/Youtube.deps.json
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/bin/Debug/netcoreapp3.1/Youtube.runtimeconfig.json
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/bin/Debug/netcoreapp3.1/Youtube.runtimeconfig.dev.json
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/bin/Debug/netcoreapp3.1/Youtube.dll
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/bin/Debug/netcoreapp3.1/Youtube.pdb
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.csprojAssemblyReference.cache
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.AssemblyInfoInputs.cache
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.AssemblyInfo.cs
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.csproj.CoreCompileInputs.cache
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.dll
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.pdb
+/Users/skylerbang/Desktop/Sparatcoding/youtube_lecture/C#_Caleb/Youtube/obj/Debug/netcoreapp3.1/Youtube.genruntimeconfig.cache

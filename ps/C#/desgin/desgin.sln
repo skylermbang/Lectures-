@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desgin", "desgin.csproj", "{DAD320C9-CF32-4911-A379-569D4ED2EEB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAD320C9-CF32-4911-A379-569D4ED2EEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD320C9-CF32-4911-A379-569D4ED2EEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD320C9-CF32-4911-A379-569D4ED2EEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD320C9-CF32-4911-A379-569D4ED2EEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2AD02B0-B0DA-4F7F-930F-3EC2E68BC670}
+	EndGlobalSection
+EndGlobal
