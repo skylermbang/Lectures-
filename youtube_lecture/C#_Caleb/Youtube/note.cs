@@ -466,6 +466,19 @@ int[,] grades3 = new int[3, 4]
     { 9,10,11,12}
 };
 
+
+
+for ( int i =0; i< grades3.GetLength(0 ); i++)   // GetLength(0) : row 
+{
+    for (int k = 0; k < grades3.GetLength(1); k++) // GetLength(1) : column ;
+        {
+    Console.Write(grades3[i, k] + " ");
+        }Console.WriteLine();
+}
+
+
+
+
 Console.WriteLine(grades3[1, 3]);
 
 int[][] grades4 =   // jagged array
@@ -480,8 +493,552 @@ Console.WriteLine(grades4[1][4]);
 
 
 
+for ( int i = 0; i < grades4.Length; i++)
+{
+    for( int k=0; k < grades4[i].Length; k++)
+    {
+        Console.Write(grades4[i][k] + "  ");
+    }
+    Console.WriteLine();
+}
 
 
+
+
+## list ##
+
+List<int> grades =  new List <int>(); generic ; generic program : create class  
+
+
+grades.add(5); // this size can be adjustable by computer automatically;
+
+greade.count;  give how many elements
+gread[0] ; get the first element
+
+List<int> grades = new List<int>();
+
+grades.Add(5);
+grades.Add(10);
+
+Console.WriteLine(grades[0]);
+
+
+grades.Insert(2, 15);
+Console.WriteLine(grades[2]);
+grades.Clear(); // clear the whole list
+grades.Remove(10); // remvoe grade 10 ;
+
+
+// List = 5 15 10
+if (grades.Contains(5))  // Contains = return boolean True /False 
+{
+    Console.WriteLine("found!"); 
+    Console.WriteLine(grades.IndexOf(15));  // Indexof = tell you which location
+
+}
+
+// grades1.SequenceEqual(grades2)   tell you if they are equal 
+
+
+
+
+### getting element by loops ##
+
+
+for(int i = 0; i < grades.Count; i++)
+{
+Console.WriteLine(grades[i]);
+}
+// for loop you can modify the element like  grades *= 2 
+
+foreach( int potato in grades)
+{
+Console.WriteLine(potato);
+}
+
+// foreach : cant update or modifiy only can read the elements 
+
+
+
+in the declartion , if the subject has IEnumerable , which mean you can use foreach
+
+## foreach with multi dimensional listed or jaggered array? ##
+
+2d array => just use nested for loop
+jaggard array, list => use nested foreach loop
+
+List<List<int>> grades = new List<List<int>>() {
+new List<int> {5, 10 ,14},
+new List<int> { 20, 80, 100, 50, 40 },
+new List<int> {0,10,50 } };
+     
+
+
+
+foreach (List<int> potato in grades)
+{
+foreach(int sweetPotato in potato)
+{
+    Console.Write(sweetPotato+ "  ");
+}Console.WriteLine();
+}
+
+you can use
+
+Listname.ToArray(); = change list to array
+you better put this in variable like
+
+int[] array_form = Listname.ToArray();
+
+work vice versa
+
+List<int> Listform = ArrayName[0].ToList();
+
+
+
+## sorting list / reverse order of list ####
+List<int> grades = new List<int>() { 10, 50, 20, 60, 70 };
+
+
+grades.Sort(); // sorting 
+grades.Reverse(); // no return just reverse;
+
+foreach (int potato in grades)
+{
+    Console.WriteLine(potato);
+}
+
+
+###########################     OOP     ################################
+
+
+functional progreaming ;
+
+
+oop :   class & object:
+
+        desgin a strucutre and make a copy of the same structure;
+
+
+        class : blueprint ,  cookie cutter ;
+        objects : cookie
+        instanticate :  make cookie from class  ( object =instance of the class )
+
+        field : variable in class level;
+        property :  public facing   ;  auto implemented property  ;
+                     will do the same thing as field but do more functionality ?
+
+
+        generally use property rather than field ;
+        property can customize how the data treated or stored;
+
+        private vs public :
+
+        priave : for the internal usage ;   can only accessible in side the parenthesis
+        public : anyone can acess ; 
+
+        so using property and methode to gain access to the privae field ;
+
+        method : allow us to do something with the object;
+                 it can access the private field in the class; 
+
+
+
+{
+Program myProgram = new Program(); // instantiate the class
+myProgram.doSomething(); // how to use the methode 
+}
+
+
+
+public void doSomething()
+{
+// do something 
+}
+
+
+void (no return) / string or integer for the return + return
+
+public string Fullname(int number)
+{
+
+string message = "";
+for (int i = 0; i < number; i++)
+{
+    message += FirstName + " " + LastName + "\n";
+               
+}
+return message;
+}
+
+
+
+####### encapsulation ######
+
+
+
+property act as gate to the field ;
+
+
+
+ public string FirstName {
+get
+{
+
+    return _firstName.ToLower()+"\n";
+
+
+
+}
+set
+{
+    _firstName = value;
+}
+
+}  // this is detaield version of the auto implemented property 
+
+
+
+
+// list of usres ? // 
+
+
+
+List<string> firstNames = new List<string>() { "Skyler", "Youme", "Jordan", "Leilei" };
+List<string> lasttNames = new List<string>() { "Bang", "Kim", "Park", "White" };
+
+            
+List<User> users = new List<User>();
+
+for (int i = 0; i < firstNames.Count; i++)  // count as you knw both lits have same length 
+{
+    User user = new User();
+    user.FirstName = firstNames[i];
+    user.LastName = lasttNames[i];
+    users.Add(user);
+}
+foreach (User individual in users)
+{
+    Console.WriteLine(individual.Fullname2);
+}
+
+## passing  variable## 
+
+inside the methodes you can chagne the value
+anytime you pass the object , its able to change in the methode;
+but you cant assigne new objects from outside. 
+
+takeUser(users[0]); // take first user 
+}
+
+
+public void takeUser (User user)
+{
+user.FirstName = "skyler";
+Console.WriteLine(user.Fullname2);
+}
+
+
+##    ##   ##   ##   ## 
+
+
+
+class - objects  (instance) 
+     
+
+
+instance way :
+user u = new User();
+u.talk ();
+
+or
+
+
+static methode
+user.findInList();
+
+
+Static methode;
+
+you can directly use Classname.Static_methode_name 
+
+[program.cs]
+User user = new User();
+user.FirstName = "a";
+user.LastName = "b"; 
+User.Waka(user);
+
+User user2 = new User();
+user2.FirstName = "giuag";
+user2.LastName = "bba";
+
+List<User> users = new List<User>();
+
+users.Add(user);
+users.Add(user2);
+
+User.PrintUsers(users);
+
+
+[user class]
+public string Output(int times)
+{
+    string msg = "";
+    for(int i=0; i< times; i++)
+    {
+        msg += Fullname2 + "\n";
+    }
+    return msg;
+}
+
+public static void PrintUsers(List<User> users)
+{
+    foreach (User user in users)
+    {
+        Console.WriteLine(user.Output(1));
+
+    }
+}
+
+
+
+## method overloading ## 
+
+
+
+method overloading .
+
+ex) Obj.Test() -> invoke other test() //    Test(int x) -> invoke Test(int x)
+        one test method but actualy two different vesion / maybe differenct functionality or parameters;
+
+
+so bascially, one methode name ; but differnet variable intake;
+
+optional parameters :
+overloading :  create different version of methode but similar functionality but still some difference;
+
+
+Console.WriteLine(User.Find(users, "ab"));
+public static int Find(List<User> users, string fullName)
+{
+            
+for(int i =0; i<users.Count; i++)
+{
+
+if (users[i].Fullname2 == fullName)
+{
+    return i;
+}
+}
+return -1;
+            
+}
+
+
+#####            overwriting methode ;               ####
+
+overriting exisitng methode to our customized version of the method; 
+
+
+"toString" => lets modify
+"Equals" =>
+
+
+public override string ToString()
+{
+return Fullname2;
+}
+
+public override bool Equals(object obj)
+{
+
+if (Fullname2 == ((User)obj).Fullname2)  return true;  // important line  this take the User object;
+
+return false;
+}
+
+
+-------- overload different methods --------
+
+
+GetHashCode () ;
+
+public override int GetHashCode()
+{
+return Fullname2.GetHashCode();
+}
+// if two objects have same data( first name / last name) in theory they are equal;
+// 
+
+
+### return custom types from methods  ##
+
+public static User GetUserFromList(List<User> users, User user)
+{
+foreach(User potato in users)
+{
+    if (potato.Equals(user))
+    {
+        return potato;
+    }
+}
+return null;
+}
+}
+
+
+value type vs reference type ;
+ 
+
+
+from the methode you can change the user's name but you cant not make new users;
+
+
+###########  inheritance ############
+
+you can steal from other class;
+
+object;  ToString ;  => but we made chagne of the ToString ; 
+
+
+if you want inheritance just simply         child class name : parent class name;
+
+in order to overide the methode child methods ; use virtual from the parent ;
+"virtual" keyword : let you override in the child class
+
+"abstract" keyword : prevent instatantiate by raw
+                     work similar to the virtual + have to overrite by adding own implementatoin
+
+
+
+###        polymorphism            ###
+
+encapsulation ;
+inheritance;
+polymorphism ;  
+
+
+Student Skyler = new Student();
+Skyler.FirstName = "Skyler";
+Skyler.Verified = true;
+Console.WriteLine(Skyler.Fullname);
+Skyler.HelloToConsole();
+
+
+Teacher Youme = new Teacher();
+Youme.FirstName = "Youme";
+
+List<User1> users = new List<User1>() { Skyler, Youme };
+
+foreach (User1 u in users)
+{
+    u.HelloToConsole();
+}
+
+
+#### constructor ####
+
+default constructor ;
+
+
+
+
+### read only property ###
+
+[program.cs]
+Student Skyler = new Student("GUGU", "GAGA");
+//Skyler.FirstName = "Skyler";
+//Skyler.Verified = true;
+//Console.WriteLine(Skyler.Fullname);
+//Skyler.HelloToConsole();
+
+
+//Teacher Youme = new Teacher();
+//Youme.FirstName = "Youme";
+
+//List<User1> users = new List<User1>() { Skyler, Youme };
+
+//foreach (User1 u in users)
+//{
+//   u.HelloToConsole();
+//}
+
+
+Skyler.HelloToConsole();
+
+
+[user1 class]
+
+public abstract class User1
+{
+public User1()
+{
+Console.WriteLine("Creating User");
+}
+
+public User1(string firstname, string lastname)
+
+{
+FirstName = firstname;
+LastName = lastname;
+}
+
+
+public bool Verified { get; set; } = false; //verifiy default false;
+      
+public string FirstName { get; }
+public string LastName { get; }
+public string FullName
+{
+
+get
+{
+    return FirstName + " " + LastName;
+
+}
+}
+
+
+public abstract void HelloToConsole();
+        
+
+
+}
+[student class]
+public class Student : User1
+{
+
+public Student()
+{
+Console.WriteLine("Creating Student");
+}
+
+public Student(string firstname, string lastname) : base(firstname, lastname)
+
+{
+            
+
+}
+
+public override void HelloToConsole()
+{
+Console.WriteLine(" Yo I an student name :{0}?", FullName );
+}
+
+
+
+
+### interface ###
+
+collection of things that we promised we put in our class to instatntiate it?
+you can only get interface from only one parent 
+
+
+
+you can add proeprty or methode in the interface usualy name as I + somthing 
+
+
+ public class Student : Users, ITalk  // to use the interface of Italk
 
 
 

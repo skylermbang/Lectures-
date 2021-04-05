@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{5D1D7C6F-50BB-4545-8214-D4BFFC36045C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="note.cs">
     <Files>
-      <File FileName="note.cs" Line="1" Column="1" />
-      <File FileName="Person.cs" Line="1" Column="1" />
+      <File FileName="note.cs" Line="1043" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Youtube" expanded="True">
             <Node name="Youtube" expanded="True">
-              <Node name="Person.cs" selected="True" />
+              <Node name="note.cs" selected="True" />
             </Node>
           </Node>
         </State>
