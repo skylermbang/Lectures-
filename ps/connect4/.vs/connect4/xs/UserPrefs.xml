@@ -3,9 +3,24 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Controller.cs">
     <Files>
       <File FileName="Program.cs" Line="44" Column="18" />
-      <File FileName="Controller.cs" Line="252" Column="26" />
-      <File FileName="Board.cs" />
+      <File FileName="Controller.cs" Line="339" Column="94" />
+      <File FileName="Board.cs" Line="23" Column="15" />
+      <File FileName="Player.cs" Line="1" Column="1" />
+      <File FileName="SaveRepository.cs" Line="1" Column="1" />
+      <File FileName="Setting.cs" Line="1" Column="1" />
+      <File FileName="UserInterface.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="connect4" expanded="True">
+            <Node name="connect4" expanded="True">
+              <Node name="Controller.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

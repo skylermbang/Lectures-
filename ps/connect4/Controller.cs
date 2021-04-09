@@ -162,6 +162,30 @@ namespace IFN563_Assignment
         }
 
 
+        public void PlaceInColumnAI(Board board, int columnNumber, int symbol)
+        {
+            int index = Board.ROWS - 1;  // index = 0 is the top 
+            int cc = board.board[index, columnNumber];
+            while ((cc == 1 || cc == 2) && index >= 0)
+            {
+                index--;
+                if (index >= 0) cc = board.board[index, columnNumber];
+            }
+
+            if (index < 0) board.columnFull[columnNumber] = true;
+
+            if (!board.columnFull[columnNumber])
+            {
+                board.board[index, columnNumber] = symbol;
+                //print board
+                Console.WriteLine(board.ToString());
+            }
+            else
+            {
+                Console.WriteLine(" \n " );
+            }
+        }
+
         public void PlayerMode2(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done)
         {
             if (determineFirstPlayer == 0) currentplayerSymbol = 1;
@@ -225,6 +249,12 @@ namespace IFN563_Assignment
         }
         public void PlayerMode1(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int level)
         {
+
+
+
+            int smart = 0;
+            int smartColumn = 0;
+
             if (determineFirstPlayer == 0) currentplayerSymbol = 1;
             else currentplayerSymbol = 2;
 
@@ -242,9 +272,9 @@ namespace IFN563_Assignment
                         PlaceInColumn(board, chosenColumn, currentplayerSymbol);
                     }
 
-                    if (WinCondition(board, currentplayerSymbol))
+                    if (WinCondition(board, 1))
                     {
-                        Console.WriteLine("player {0} has won !  \n\n", currentplayerSymbol);
+                        Console.WriteLine("player has won !  \n\n");
                         board = PlayAgainPrompt();
 
                         //player wants to exit
@@ -266,21 +296,41 @@ namespace IFN563_Assignment
 
                           
                                 chosenColumn = new Random().Next(6);
-                                PlaceInColumn(board, chosenColumn, currentplayerSymbol);
+                                PlaceInColumnAI(board, chosenColumn, currentplayerSymbol);
                                 if (board.columnFull[chosenColumn])
                                 {
                                     chosenColumn = new Random().Next(6);
+                                    PlaceInColumnAI(board, chosenColumn, currentplayerSymbol);
+                                }
+
+                                if (WinCondition(board, 2))
+                                {
+                                    Console.WriteLine("Computer has won !  \n\n");
+                                    board = PlayAgainPrompt();
+
+                                    //player wants to exit
+                                    if (board == null)
+                                    {
+                                        break;
+                                    }
                                 }
 
 
-                                   
+                                if (board.BoardIsFull())
+                                {
+                                    Console.WriteLine(" All the board is full");
+                                    board = PlayAgainPrompt();
+
+                                    //player wants to exit
+                                    if (board == null)
+                                    {
+                                        Console.WriteLine(" Bye ");
+                                        break;
+
+                                    }
+                                }
                                 currentplayerSymbol = 1;
                          
-
-                            
-
-
-
 
                             }
 
@@ -292,57 +342,98 @@ namespace IFN563_Assignment
 
                             else if(currentplayerSymbol == 2 && level == 2)
                             {
-                                int smart = new Random().Next(-1, 1);
-
-
+                                
 
 
 
                                 for (int i = 0; i < Board.ROWS; i++)
                                 {
-                                    for (int j = 0; j < Board.COLUMNS - 3; j++)
+                                    for (int j = 0; j < 3; j++)
 
 
                                     {
-                                        if (
 
-                                            board.board[i, j] == 1 && board.board[i, j + 1] == 1 && board.board[i, j + 2] == 0
 
-                                            )
+                                        if (board.board[i, j] == 1 && board.board[i, j + 1] == 1 && board.board[i, j + 2] == 0)
                                         {
 
-
-                                            Console.WriteLine("testing");
-                                            if(chosenColumn <= 3) smart =  1;
+                                            smart = 1;
+                                            Console.WriteLine("smart is   1");
+                                            
 
                                         }
-                                       
+                                        else if (chosenColumn == 5)
+                                        {
+                                            smart = new Random().Next(-2, 1);
+                                         }
+                                        else if(chosenColumn == 0)
+                                                {
+                                            smart = new Random().Next(0, 3);
+                                        }
+                                        else{
+                                            smart = new Random().Next(-1, 1);
+
+                                        }
+                                        
+
+
+
                                     }
 
-
                                 }
-
-                               
-
-                                if (chosenColumn == 0)
+                           
+                                /*
+                                if (chosenColumn == 5)
                                 {
-                                     smart = new Random().Next(0,3);
-                                }else if(chosenColumn == 5)
-                                {
-                                     smart = new Random().Next(-2,1);
+                                    smart = new Random().Next(-2, 1);
                                 }
-                                int smartColumn = chosenColumn + smart;
+                                else if (chosenColumn == 0)
+                                {
+                                    smart = new Random().Next(0, 3);
+                                }
+                                /*
+                                else
+                                {
+                                    smart = new Random().Next(-1, 1);
 
-                                
-                         
-                                PlaceInColumn(board, smartColumn, currentplayerSymbol);
+                                }*/
+                             
+
+                                smartColumn = chosenColumn + smart;
+                                Console.WriteLine("smart column is  {0}", smartColumn);
+                                PlaceInColumnAI(board, smartColumn, currentplayerSymbol);
                                 if (board.columnFull[smartColumn])
                                 {
-                                    smartColumn = smartColumn + 1;
-                                    PlaceInColumn(board, smartColumn, currentplayerSymbol);
+                                    chosenColumn = new Random().Next(6);
+                                    PlaceInColumnAI(board,chosenColumn, currentplayerSymbol);
                                 }
+                                if (WinCondition(board, 2))
+                                {
+                                    Console.WriteLine("Computer has won !  \n\n");
+                                    board = PlayAgainPrompt();
 
+                                    //player wants to exit
+                                    if (board == null)
+                                    {
+                                        break;
+                                    }
+                                }
+                                if (board.BoardIsFull())
+                                {
+                                    Console.WriteLine(" All the board is full");
+                                    board = PlayAgainPrompt();
+
+                                    //player wants to exit
+                                    if (board == null)
+                                    {
+                                        Console.WriteLine(" Bye ");
+                                        break;
+
+                                    }
+                                }
                                 currentplayerSymbol = 1;
+
+
 
                      
                             }

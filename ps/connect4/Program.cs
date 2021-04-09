@@ -68,69 +68,6 @@ namespace IFN563_Assignment
             }
             
 
-
-            /*
-            int determineFirstPlayer = 0; //  payer 1 = 0 ;  payer 2 = 1;
-
-            if (determineFirstPlayer == 0) currentplayerSymbol = 1;
-            else currentplayerSymbol = 2;
-
-            do
-            {
-                if (currentplayerSymbol == 1) Console.WriteLine("player 1 :"); else Console.WriteLine("Player 2 :");
-                Console.WriteLine("Choose your coulmn number  from 0 to 6");
-
-                try
-                {
-                    chosenColumn = int.Parse(Console.ReadLine());
-
-                    if (chosenColumn >= 0 && chosenColumn <= 6)
-                    {
-                        controller.PlaceInColumn(board, chosenColumn, currentplayerSymbol);
-                    }
-
-                    if (controller.WinCondition(board, currentplayerSymbol))
-                    {
-                        Console.WriteLine("player {0} has won !  \n\n", currentplayerSymbol);
-                        board = controller.PlayAgainPrompt();
-
-                        //player wants to exit
-                        if (board == null)
-                        {
-                            break;
-                        }
-                    }
-                    else
-                    {
-                        if (!board.columnFull[chosenColumn])
-                        {
-                            currentplayerSymbol = (currentplayerSymbol == 1 ? 2 : 1);
-                        }
-                    }
-
-
-                    if (board.BoardIsFull())
-                    {
-                        Console.WriteLine(" All the board is full");
-                        board = controller.PlayAgainPrompt();
-
-                        //player wants to exit
-                        if (board == null)
-                        {
-                         Console.WriteLine(" Bye ");
-                            break;
-                        
-                        }
-                    }
-
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine(" Unknwon Error  Please try again");
-                }
-
-            } while (!done); // do -while loop continuous til done = true;
-            */
         }
 
     }
