@@ -1,5 +1,5 @@
 ﻿using System;
-namespace connect4
+namespace IFN563_Assignment
 {
     public class SaveRepository
     {

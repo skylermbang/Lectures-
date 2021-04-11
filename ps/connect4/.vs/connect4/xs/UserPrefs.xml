@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{49245127-9233-4172-8B6E-DA3D5F6E865F}|Default">
   <MonoDevelop.Ide.ItemProperties.connect4 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cell.cs">
     <Files>
-      <File FileName="Program.cs" Line="44" Column="18" />
-      <File FileName="Controller.cs" Line="339" Column="94" />
-      <File FileName="Board.cs" Line="23" Column="15" />
-      <File FileName="Player.cs" Line="1" Column="1" />
-      <File FileName="SaveRepository.cs" Line="1" Column="1" />
-      <File FileName="Setting.cs" Line="1" Column="1" />
-      <File FileName="UserInterface.cs" Line="1" Column="1" />
+      <File FileName="Controller.cs" Line="194" Column="42" />
+      <File FileName="Board.cs" Line="4" Column="2" />
+      <File FileName="UserInterface.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="Saver.cs" Line="49" Column="14" />
+      <File FileName="Cell.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="connect4" expanded="True">
             <Node name="connect4" expanded="True">
-              <Node name="Controller.cs" selected="True" />
+              <Node name="Cell.cs" selected="True" />
             </Node>
           </Node>
         </State>

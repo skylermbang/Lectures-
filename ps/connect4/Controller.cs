@@ -11,7 +11,7 @@ namespace IFN563_Assignment
 
     public class Controller
     {
-
+        /*
         public Board PlayAgainPrompt()
         {
             Board board = null;
@@ -26,6 +26,7 @@ namespace IFN563_Assignment
 
             return board;
         }
+        */
 
 
         /// check win condition
@@ -54,7 +55,7 @@ namespace IFN563_Assignment
 
                         Console.WriteLine(" \n\n Horizontal Connect 4  ");
                         win_horizontal = true;
-
+                       
                     }
                 }
 
@@ -129,6 +130,7 @@ namespace IFN563_Assignment
             if (win_vertical || win_horizontal || win_digo1 || win_digo2)
             {
                 win = true;
+                
             }
 
             return win;
@@ -137,7 +139,7 @@ namespace IFN563_Assignment
 
         /// place in column
 
-        public void PlaceInColumn(Board board, int columnNumber, int symbol)
+        public void PlaceInColumn(Board board, int columnNumber, int symbol )
         {
             int index = Board.ROWS - 1;  // index = 0 is the top 
             int cc = board.board[index, columnNumber];
@@ -154,6 +156,8 @@ namespace IFN563_Assignment
                 board.board[index, columnNumber] = symbol;
                 //print board
                 Console.WriteLine(board.ToString());
+
+
             }
             else
             {
@@ -186,7 +190,7 @@ namespace IFN563_Assignment
             }
         }
 
-        public void PlayerMode2(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done)
+        public void PlayerMode2(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int sequence)
         {
             if (determineFirstPlayer == 0) currentplayerSymbol = 1;
             else currentplayerSymbol = 2;
@@ -202,13 +206,17 @@ namespace IFN563_Assignment
 
                     if (chosenColumn >= 0 && chosenColumn <= 6)
                     {
-                        PlaceInColumn(board, chosenColumn, currentplayerSymbol);
+                        PlaceInColumn(board, chosenColumn, currentplayerSymbol );
+                        sequence++;
+                        Console.WriteLine("{0} sequence", sequence);
+                        Saver.Save(board, sequence);
                     }
 
                     if (WinCondition(board, currentplayerSymbol))
                     {
                         Console.WriteLine("player {0} has won !  \n\n", currentplayerSymbol);
-                        board = PlayAgainPrompt();
+                        board = UserInterface.PlayAgainPrompt();
+                      
 
                         //player wants to exit
                         if (board == null)
@@ -228,7 +236,8 @@ namespace IFN563_Assignment
                     if (board.BoardIsFull())
                     {
                         Console.WriteLine(" All the board is full");
-                        board = PlayAgainPrompt();
+                        board = UserInterface.PlayAgainPrompt();
+
 
                         //player wants to exit
                         if (board == null)
@@ -247,7 +256,7 @@ namespace IFN563_Assignment
 
             } while (!done); // do -while loop continuous til done = true;
         }
-        public void PlayerMode1(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int level)
+        public void PlayerMode1(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int level, int sequence)
         {
 
 
@@ -275,7 +284,7 @@ namespace IFN563_Assignment
                     if (WinCondition(board, 1))
                     {
                         Console.WriteLine("player has won !  \n\n");
-                        board = PlayAgainPrompt();
+                        board = UserInterface.PlayAgainPrompt();
 
                         //player wants to exit
                         if (board == null)
@@ -306,7 +315,8 @@ namespace IFN563_Assignment
                                 if (WinCondition(board, 2))
                                 {
                                     Console.WriteLine("Computer has won !  \n\n");
-                                    board = PlayAgainPrompt();
+                                    board = UserInterface.PlayAgainPrompt();
+
 
                                     //player wants to exit
                                     if (board == null)
@@ -319,7 +329,7 @@ namespace IFN563_Assignment
                                 if (board.BoardIsFull())
                                 {
                                     Console.WriteLine(" All the board is full");
-                                    board = PlayAgainPrompt();
+                                    board = UserInterface.PlayAgainPrompt();
 
                                     //player wants to exit
                                     if (board == null)
@@ -410,7 +420,8 @@ namespace IFN563_Assignment
                                 if (WinCondition(board, 2))
                                 {
                                     Console.WriteLine("Computer has won !  \n\n");
-                                    board = PlayAgainPrompt();
+                                    board = UserInterface.PlayAgainPrompt();
+
 
                                     //player wants to exit
                                     if (board == null)
@@ -421,7 +432,7 @@ namespace IFN563_Assignment
                                 if (board.BoardIsFull())
                                 {
                                     Console.WriteLine(" All the board is full");
-                                    board = PlayAgainPrompt();
+                                    board = UserInterface.PlayAgainPrompt();
 
                                     //player wants to exit
                                     if (board == null)
@@ -444,7 +455,7 @@ namespace IFN563_Assignment
                     if (board.BoardIsFull())
                     {
                         Console.WriteLine(" All the board is full");
-                        board = PlayAgainPrompt();
+                        board = UserInterface.PlayAgainPrompt();
 
                         //player wants to exit
                         if (board == null)
