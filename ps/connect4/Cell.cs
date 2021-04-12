@@ -1,45 +1,44 @@
 ﻿using System;
-namespace connect4
+using System.Collections.Generic;
+
+namespace IFN563_Assignment
 {
     public class Cell
     {
-          #region Private Varibales
 
-            private int _player;
-            private int _sequence;
 
-            #endregion
+        public static int _player = 0;
+        public static int _turn = 0;
+        public static List<int> _column = new List<int>();
 
-            #region Consturctors
-
-            public Cell()
+        public static void CellHistory(int currentplayerSymbol, int sequence, int column)
             {
-                _player = 0;
-                _sequence = -1;
+                _player = currentplayerSymbol;
+                _turn = sequence;
+                _column.Add(column);
+        }
+
+
+
+        public static string ShowCellHistory( )
+        {
+           foreach (int column in _column)
+            {
+                Console.WriteLine(column);
+                
+                
             }
 
-            public Cell(int player, int sequence)
-            {
-                _player = player;
-                _sequence = sequence;
-            }
+            string result = string.Join(",", _column);
 
-            #endregion
+            return result;
+            
 
-            #region Public Properties
-
-            public int Player
-            {
-                get => _player;
-                set => _player = value;
-            }
-
-            public int Sequence
-            {
-                get => _sequence;
-                set => _sequence = value;
-            }
-
-            #endregion
+        }
     }
 }
+
+
+
+
+

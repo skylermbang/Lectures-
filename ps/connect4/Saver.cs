@@ -32,10 +32,17 @@ namespace IFN563_Assignment
         {
             StreamWriter sw = new StreamWriter(new FileStream("saveFile.dat", FileMode.Create));
 
-            sw.WriteLine(Connect4Game.gameMode);
-            sw.WriteLine(Connect4Game.level);
-        
-          
+
+            string saveStr = string.Empty;
+
+      
+
+            saveStr = Cell.ShowCellHistory().ToString();
+            sw.WriteLine(saveStr);
+
+
+            
+            /*
             for (int i = 0; i < Board.ROWS; i++)
             {
                 string saveStr = string.Empty;
@@ -46,7 +53,7 @@ namespace IFN563_Assignment
                 }
 
                 sw.WriteLine(saveStr);
-            }
+            }*/
 
             sw.Close();
             Console.WriteLine(" testing ");

@@ -130,6 +130,7 @@ namespace IFN563_Assignment
             if (win_vertical || win_horizontal || win_digo1 || win_digo2)
             {
                 win = true;
+                //Cell.ShowCellHistory();
                 
             }
 
@@ -208,7 +209,11 @@ namespace IFN563_Assignment
                     {
                         PlaceInColumn(board, chosenColumn, currentplayerSymbol );
                         sequence++;
-                        Console.WriteLine("{0} sequence", sequence);
+                    
+                        //Console.WriteLine("{0} sequence", sequence);
+
+                        Cell.CellHistory(currentplayerSymbol,sequence, chosenColumn);
+                        Console.WriteLine("player is  {0} , and it was {1}th turn", Cell._player, Cell._turn);
                         Saver.Save(board, sequence);
                     }
 
