@@ -8,8 +8,8 @@ namespace IFN563_Assignment
     public class Board
     {
      
-        public const int ROWS = 7;
-        public const int COLUMNS = 6;         
+        public const int ROWS = 6;
+        public const int COLUMNS = 7;         
         public int[,] board = new int[ROWS, COLUMNS];
         public bool[] columnFull = new bool[COLUMNS];
 
@@ -77,5 +77,45 @@ namespace IFN563_Assignment
             return true;
         }
 
+        public void PlaceInColumn( int columnNumber, int symbol )
+        {
+            int index = ROWS - 1;  // index = 0 is the top 
+            int cc = board[ index, columnNumber ];
+            while ( ( cc == 1 || cc == 2 ) && index >= 0 )
+            {
+                index--;
+                if ( index >= 0 ) cc = board[ index, columnNumber ];
+            }
+
+            if ( index < 0 ) columnFull[ columnNumber ] = true;
+
+            if ( !columnFull[ columnNumber ] )
+            {
+                board[ index, columnNumber ] = symbol;
+                //print board
+                Console.WriteLine(board.ToString());
+            }
+            else
+            {
+                Console.WriteLine( " The column is full please try again. " );
+            }
+        }
+
+        public void UpdateBoard()
+        {
+            InitializeBoard();
+
+            for ( int i = 0; i < Cell._column.Count; i++ )
+            {
+                if ( i % 2 == 0 )
+                {
+                    PlaceInColumn( Cell._column[ i ], 1 );
+                }
+                else
+                {
+                    PlaceInColumn( Cell._column[ i ], 2 );
+                }
+            }
+        }
     }
 }

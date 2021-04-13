@@ -32,15 +32,10 @@ namespace IFN563_Assignment
         {
             StreamWriter sw = new StreamWriter(new FileStream("saveFile.dat", FileMode.Create));
 
-
             string saveStr = string.Empty;
-
-      
 
             saveStr = Cell.ShowCellHistory().ToString();
             sw.WriteLine(saveStr);
-
-
             
             /*
             for (int i = 0; i < Board.ROWS; i++)

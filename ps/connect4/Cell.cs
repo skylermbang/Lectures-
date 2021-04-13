@@ -5,11 +5,12 @@ namespace IFN563_Assignment
 {
     public class Cell
     {
-
-
         public static int _player = 0;
         public static int _turn = 0;
         public static List<int> _column = new List<int>();
+
+        // player1 -> column 4: _column.Add(4)
+        // player2 -> column 5: _column.Add(5)
 
         public static void CellHistory(int currentplayerSymbol, int sequence, int column)
             {
@@ -32,8 +33,6 @@ namespace IFN563_Assignment
             string result = string.Join(",", _column);
 
             return result;
-            
-
         }
     }
 }

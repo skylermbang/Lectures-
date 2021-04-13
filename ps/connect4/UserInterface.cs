@@ -48,8 +48,7 @@ namespace IFN563_Assignment
             Console.WriteLine("    This is Game mode 2  :  Player1 vs Player2  \n\n");
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine(board.ToString());
-            controller.PlayerMode2(board, 6, 1, 0, 1, 0, false, 0);
-
+            controller.PlayerMode2(board, 6, 1, 0, 0, false, 0);
         }
 
         internal static void ChooseLevel(int level)

@@ -11,6 +11,8 @@ namespace IFN563_Assignment
 
     public class Controller
     {
+        public int CurrentPlayerSymbol = 1;
+
         /*
         public Board PlayAgainPrompt()
         {
@@ -40,9 +42,9 @@ namespace IFN563_Assignment
             bool win_digo2 = false;
             bool win = false;
 
-            for (int i = 0; i < Board.ROWS; i++)
+            for (int i = 0; i < Board.ROWS; i++)//vertical 
             {
-                for (int j = 0; j < Board.COLUMNS - 3; j++)
+                for (int j = 0; j < Board.COLUMNS - 3; j++)//horizontal 
 
 
                 {
@@ -100,25 +102,25 @@ namespace IFN563_Assignment
                         )
                     {
 
-                        Console.WriteLine(" \n\n Uppder Digonal Connect 4  ");
+                        Console.WriteLine(" \n\n Downward Digonal Connect 4  ");
                         win_digo1 = true;
 
                     }
                 }
             }
 
-            for (int i = 6; i > 3; i--)
+            for (int i = 0; i < Board.ROWS- 3; i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 6; j >  2; j--)
                 {
 
 
-                    if (
-                         board.board[i, j] == currentplayerSymbol && board.board[i - 1, j + 1] == currentplayerSymbol &&
-                         board.board[i - 2, j + 2] == currentplayerSymbol && board.board[i - 3, j + 3] == currentplayerSymbol
+                  if (
+                         board.board[i, j] == currentplayerSymbol && board.board[i + 1, j - 1] == currentplayerSymbol &&
+                         board.board[i + 2, j - 2] == currentplayerSymbol && board.board[i + 3, j - 3] == currentplayerSymbol
                         )
 
-                    {
+                    {  
 
                         Console.WriteLine(" \n\n Uppder Digonal Connect 4  ");
                         win_digo2 = true;
@@ -191,81 +193,90 @@ namespace IFN563_Assignment
             }
         }
 
-        public void PlayerMode2(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int sequence)
+        public void PlayerMode2(Board board, int columnNumber, int symbol, int determineFirstPlayer, int chosenColumn, bool done, int sequence)
         {
-            if (determineFirstPlayer == 0) currentplayerSymbol = 1;
-            else currentplayerSymbol = 2;
+            if (determineFirstPlayer == 0) CurrentPlayerSymbol = 1;
+            else CurrentPlayerSymbol = 2;
 
             do
             {
-                if (currentplayerSymbol == 1) Console.WriteLine("player 1 :"); else Console.WriteLine("Player 2 :");
-                Console.WriteLine("Choose your coulmn number  from 0 to 5");
+                if ( CurrentPlayerSymbol == 1) Console.WriteLine("player 1 :"); else Console.WriteLine("Player 2 :");
+
+                Console.WriteLine("Choose your coulmn number  from 0 to 6 ( -1: Go Back )");
 
                 try
                 {
-                    chosenColumn = int.Parse(Console.ReadLine());
+                    chosenColumn = int.Parse( Console.ReadLine() );
 
-                    if (chosenColumn >= 0 && chosenColumn <= 6)
+                    if ( chosenColumn >= 0 && chosenColumn <= 6 )
                     {
-                        PlaceInColumn(board, chosenColumn, currentplayerSymbol );
+                        PlaceInColumn( board, chosenColumn, CurrentPlayerSymbol );
                         sequence++;
-                    
+
                         //Console.WriteLine("{0} sequence", sequence);
 
-                        Cell.CellHistory(currentplayerSymbol,sequence, chosenColumn);
-                        Console.WriteLine("player is  {0} , and it was {1}th turn", Cell._player, Cell._turn);
-                        Saver.Save(board, sequence);
+                        Cell.CellHistory( CurrentPlayerSymbol, sequence, chosenColumn );
+                        //Console.WriteLine( "player is  {0} , and it was {1}th turn", Cell._player, Cell._turn );
+                        Saver.Save( board, sequence );
+                    }
+                    else if ( chosenColumn == -1 )
+                    {
+                        GoBack(board);
+                        board.UpdateBoard();
+                        Console.WriteLine(board.ToString());
                     }
 
-                    if (WinCondition(board, currentplayerSymbol))
+                    if ( WinCondition( board, CurrentPlayerSymbol ) )
+
                     {
-                        Console.WriteLine("player {0} has won !  \n\n", currentplayerSymbol);
+                        Console.WriteLine(board.ToString());
+                        Console.WriteLine( "player {0} has won !  \n\n", CurrentPlayerSymbol );
                         board = UserInterface.PlayAgainPrompt();
-                      
+
 
                         //player wants to exit
-                        if (board == null)
+                        if ( board == null )
                         {
                             break;
                         }
                     }
                     else
                     {
-                        if (!board.columnFull[chosenColumn])
+                        if ( chosenColumn != -1)
                         {
-                            currentplayerSymbol = (currentplayerSymbol == 1 ? 2 : 1);
+                            if ( !board.columnFull[ chosenColumn ] )
+                            {
+                                CurrentPlayerSymbol = ( CurrentPlayerSymbol == 1 ? 2 : 1 );
+                                Console.WriteLine(board.ToString());
+                            }
                         }
                     }
 
 
-                    if (board.BoardIsFull())
+                    if ( board.BoardIsFull() )
                     {
-                        Console.WriteLine(" All the board is full");
+                        Console.WriteLine( " All the board is full" );
                         board = UserInterface.PlayAgainPrompt();
 
 
                         //player wants to exit
-                        if (board == null)
+                        if ( board == null )
                         {
-                            Console.WriteLine(" Bye ");
+                            Console.WriteLine( " Bye " );
                             break;
 
                         }
                     }
-
                 }
-                catch (Exception)
+                catch ( Exception ex )
                 {
-                    Console.WriteLine(" Unknwon Error  Please try again");
+                    Console.WriteLine( " Unknwon Error  Please try again" );
                 }
 
             } while (!done); // do -while loop continuous til done = true;
         }
         public void PlayerMode1(Board board, int columnNumber, int symbol, int determineFirstPlayer, int currentplayerSymbol, int chosenColumn, bool done, int level, int sequence)
         {
-
-
-
             int smart = 0;
             int smartColumn = 0;
 
@@ -482,7 +493,18 @@ namespace IFN563_Assignment
             } while (!done); // do -while loop continuous til done = true;
         }
 
-
-
+        public void GoBack(Board board)
+        {
+            if ( Cell._column == null || Cell._column.Count < 2)
+            {
+                return;
+            }
+            else
+            {
+                Cell._column.Remove( Cell._column.Last() );
+                Cell._column.Remove( Cell._column.Last() );
+                //Console.WriteLine(board.ToString());
+            }
+        }
     }
 }

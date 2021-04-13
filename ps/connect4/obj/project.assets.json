@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/skylerbang/Downloads/QUT/QUT_Programming/QUT/563/oop/connect4/connect4.csproj",
+      "projectUniqueName": "/Users/skylerbang/Desktop/oop/0412connect4/connect4/connect4.csproj",
       "projectName": "connect4",
-      "projectPath": "/Users/skylerbang/Downloads/QUT/QUT_Programming/QUT/563/oop/connect4/connect4.csproj",
+      "projectPath": "/Users/skylerbang/Desktop/oop/0412connect4/connect4/connect4.csproj",
       "packagesPath": "/Users/skylerbang/.nuget/packages/",
-      "outputPath": "/Users/skylerbang/Downloads/QUT/QUT_Programming/QUT/563/oop/connect4/obj/",
+      "outputPath": "/Users/skylerbang/Desktop/oop/0412connect4/connect4/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/skylerbang/.config/NuGet/NuGet.Config"
