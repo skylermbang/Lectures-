@@ -20,6 +20,8 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
+
+
     <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
 
   <style>
@@ -42,11 +44,24 @@
      }
   </style>
 
-  <script>
-  function hey(){
-    alert("안녕");}
-  </script>
+
 </head>
+
+<script>
+ let count =1;
+    function hey(){
+
+         if (count% 2 == 0){
+            alert("even nummber")
+        }else{
+            alert("odd number")
+        }
+         count+= 1;
+    }
+
+
+
+</script>
 
 <body>
 
@@ -58,7 +73,7 @@
         <hr class="my-4">
 
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">포스팅박스 열기</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button" onclick="hey()">포스팅박스 열기</a>
         </p>
     </div>
 
@@ -74,7 +89,7 @@
     <input type="text" class="form-control" id="exampleInputPassword1">
   </div>
 
-  <button type="submit" class="btn btn-primary" onclick="hey()"> Save</button>
+  <button type="submit" class="btn btn-primary" > Save</button>
 </div>
 
 
