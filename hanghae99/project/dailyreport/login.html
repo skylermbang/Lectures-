@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import "bourbon";
+
+      body {
+        background: #eee !important;
+      }
+
+      .wrapper {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+
+      .form-signin {
+        max-width: 380px;
+        padding: 15px 35px 45px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        .form-signin-heading,
+        .checkbox {
+          margin-bottom: 30px;
+        }
+
+        .checkbox {
+          font-weight: normal;
+        }
+
+        .form-control {
+          position: relative;
+          font-size: 16px;
+          height: auto;
+          padding: 10px;
+          @include box-sizing(border-box);
+
+          &:focus {
+            z-index: 2;
+          }
+        }
+
+        input[type="text"] {
+          margin-bottom: -1px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        input[type="password"] {
+          margin-bottom: 20px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please login</h2>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          placeholder="Email Address"
+          required=""
+          autofocus=""
+        />
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Password"
+          required=""
+        />
+        <label class="checkbox">
+          <input
+            type="checkbox"
+            value="remember-me"
+            id="rememberMe"
+            name="rememberMe"
+          />
+          Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Login
+        </button>
+      </form>
+    </div>
+  </body>
+  <script>
+    var ctx = document.getElementById("lineChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        // label 여기에 데이터를 정의할 수 있습니다.
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [
+          {
+            label: "# of Votes",
+            //   data 여기의 데이터를 변경할 수 있습니다.
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+    var ctx = document.getElementById("pieChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "pie",
+      data: {
+        // label 여기에 데이터를 정의할 수 있습니다.
+        labels: [],
+        datasets: [
+          {
+            label: "# of Votes",
+            //   data 여기의 데이터를 변경할 수 있습니다.
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  </script>
+</html>

@@ -1,0 +1,25 @@
+/postdaily 
+POST 
+Body = (id, date, hour, category1, hour1, description1, category2, hour2, description2, category3, hour3, description3, immerse, about)
+return = {'data': "saved", 'msg': "해당 날짜의 데이터가 저장되었습니다"} or {'data': "updated", 'msg': "해당 날짜의 데이터가 업데이트되었습니다"}
+
+/getdaily
+POST 
+Body = (id, date, hour)
+return = 
+{"about": "기록", "date": "2021-06-01", "did":
+[{"category": "공부","description": "아무거나","hour": 4},
+{"category": "여가","description": "테스트","hour": 2},
+{"category": "업무","description": "테스트2","hour": 2}],
+# "hour": 5,"id": "test","immerse": 4.5}
+
+/piechart
+POST 
+BODY = (id, date) 
+return = {"수면": 1,"휴식": 4,"정비": 8,"식사": 6,"간식": 2,"업무": 2, "강의":5, "운전":7, "여가":10, "폰질":2, "기타":7,
+"category_sum": {"기타": 10,"업무": 3,"자기계발": 4,"휴식": 6}}
+
+/avgimmerse
+POST 
+BODY = (id, date)
+return = { "avg_immerse": 4.0 }
