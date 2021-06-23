@@ -2,7 +2,7 @@ import math
 #a, n = map(int, input().split())
 
 a= 1
-n= 20
+n= 2
 array = [True for i in range(1000001)]
 array[0] = False
 array[1] = False

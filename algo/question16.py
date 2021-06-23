@@ -6,6 +6,8 @@ from math import gcd
 a=24
 b=18
 
+# 유클리드 호제법 
+# 내장함수써도댐
 def gcd(a,b):
     
     while b > 0:
