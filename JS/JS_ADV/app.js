@@ -43,11 +43,11 @@ router.get("/todos", async (req, res) => {
 
 router.patch("/todos/:todoId", async (req, res) => {
   const { todoId } = req.params;
-  const { order } = req.body;
+  const { order, value, done } = req.body;
 
   const todo = await Todo.findById(todoId).exec();
 
-  if ({ order }) {
+  if (order) {
     const targetTodo = await Todo.findOne({ order }).exec();
     if (targetTodo) {
       targetTodo.order = todo.order;
@@ -56,17 +56,37 @@ router.patch("/todos/:todoId", async (req, res) => {
     todo.order = order;
     await todo.save();
   }
+
+  if (value) {
+    const targetTodo = await Todo.findById(todoId).exec();
+    targetTodo.value = value;
+    await targetTodo.save();
+  }
+
+  if (done) {
+    const targetTodo = await Todo.findById(todoId).exec();
+    now = new Date();
+    targetTodo.doneAt = now;
+    await targetTodo.save();
+    console.log(done, targetTodo.doneAt);
+  } else {
+    const targetTodo = await Todo.findById(todoId).exec();
+    targetTodo.doneAt = null;
+    await targetTodo.save();
+    console.log(done, targetTodo.doneAt);
+  }
   res.send({});
 });
 
 router.delete("/todos/:todoId", async (req, res) => {
   const { todoId } = req.params;
-  const isExist = await Todo.find({ todoId });
-  console.log(todoId, isExist);
+  const isExist = await Todo.findById(todoId).exec();
+
+  console.log(isExist);
   if (isExist) {
-    await Todo.deleteOne({ todoId });
+    isExist.delete(todoId);
   }
-  res.send({ result: sucess });
+  res.send({});
 });
 
 app.use("/api", bodyParser.json(), router);
