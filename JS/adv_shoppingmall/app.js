@@ -1,6 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const User = require("./models/user");
+const { User } = require("./models/");
+const { Op } = require("sequelize");
+const jwt = require("jsonwebtoken");
+const authMiddleware = require("./middlewares/auth-middleware");
 
 mongoose.connect("mongodb://localhost/shopping-demo", {
   useNewUrlParser: true,
@@ -20,8 +23,10 @@ router.post("/users", async (req, res) => {
     return;
   }
 
-  const existsUsers = await User.find({
-    $or: [{ email }, { nickname }],
+  const existsUsers = await User.findAll({
+    where: {
+      [Op.or]: [{ nickname }, { email }],
+    },
   });
   if (existsUsers.length) {
     res.status(400).send({
@@ -30,9 +35,36 @@ router.post("/users", async (req, res) => {
     return;
   }
 
-  const user = new User({ email, nickname, password });
-  await user.save();
+  const user = await User.create({ email, nickname, password });
+
   res.status(201).send({});
+});
+
+router.post("/auth", async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ where: { email, password } });
+
+  if (!user) {
+    res.status(401).send({ errorMessage: "email or password is not match" });
+    return;
+  }
+
+  const token = jwt.sign({ userId: user.userId }, "this_is_my_secret");
+  res.send({
+    token,
+  });
+});
+
+router.get("/users/me", authMiddleware, async (req, res) => {
+  const { user } = res.locals;
+  console.log(user);
+  res.send({
+    user: {
+      email: user.email,
+      nickname: user.nickname,
+    },
+  });
 });
 
 app.use("/api", express.urlencoded({ extended: false }), router);
