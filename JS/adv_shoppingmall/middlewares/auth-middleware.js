@@ -6,12 +6,10 @@ module.exports = (req, res, next) => {
   const { authorization } = req.headers;
   const [tokenType, tokenValue] = authorization.split(" ");
   console.log(tokenValue);
-
   if (tokenType !== "Bearer") {
     res.status(401).send({ errorMessage: "Login please " });
     return;
   }
-
   try {
     const { userId } = jwt.verify(tokenValue, "this_is_my_secret");
 
