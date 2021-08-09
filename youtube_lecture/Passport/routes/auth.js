@@ -6,13 +6,15 @@ const passport = require('passport')
 //auth login
 
 router.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login',)
 })
 
 // auth with google 
 router.get('/logout', (req, res) => {
-    //handle with passport
-    res.send('logging out')
+    //handle with 
+    req.logout()
+    res.redirect('/',)
+
 })
 
 
@@ -22,7 +24,9 @@ router.get('/google', passport.authenticate('google', {
 
 
 //callback route for google to redirect to
-router.get('/google/redirect', (req, res) => {
-    res.send('you fucking reached here bitch ')
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+    console.log(req.user)
+    //res.send('you fucking reached here bitch ')
+    res.redirect('/profile/')
 })
 module.exports = router
