@@ -7,6 +7,7 @@ const User = require('../../models/user')
 //serialize
 // get info -> put it in cookie
 passport.serializeUser((user, done) => {
+
     done(null, user.id);
 })
 
@@ -18,6 +19,7 @@ passport.deserializeUser((id, done) => {
     })
 })
 
+
 passport.use(
     new GoogleStrategy({
         //options for the google strategy
@@ -26,6 +28,9 @@ passport.use(
         clientSecret: keys.google.clientSecret
     }, async (accessToken, refreshToken, profile, done) => {
         //passport callback function
+
+        console.log("fuckkkkk")
+        console.log(profile.emails[0].value)
 
         // check if user already exist in our db 
         const foundUser = await User.findOne({ googleId: profile.Id })
@@ -37,6 +42,7 @@ passport.use(
 
         } else {
             // new user to create in our db
+            console.log(profile.email)
             new User({
                 username: profile.displayName,
                 googleId: profile.Id
