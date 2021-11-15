@@ -1,0 +1,31 @@
+type Query {
+  movies(limit: Int, rating: Float): [Movie]
+  naver: String
+}
+
+type Skyler {
+  name: String
+  age: Int!
+  gender: String!
+}
+
+type Person {
+  name: String
+  age: Int!
+  gender: String!
+  id: Int!
+}
+
+type Movie {
+  id: Int
+  title: String
+  rating: Float
+  summary: String
+  language: String
+  medium_cover_image: String
+}
+
+type Mutation {
+  addMovie(name: String, score: Int): Movie!
+  deleteMovie(id: Int): Boolean!
+}
